@@ -1,0 +1,26 @@
+$frontline-margin: 0.5rem;
+$frontline-padding: $frontline-margin;
+$frontline-border-radius: 2px;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+
+  gap: $frontline-margin;
+
+  padding: $frontline-padding;
+  border-radius: $frontline-border-radius;
+  font-size: 0.8rem;
+
+  color: #1f2024;
+
+  &.info {
+    border: 1px solid #88c1f0;
+    background-color: #bfdef8;
+  }
+}
+
+.content {
+  font-size: inherit;
+}

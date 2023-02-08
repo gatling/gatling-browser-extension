@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Gatling browser extension",
+  "name": "Gatling Browser Extension",
   "description": "Todo",
   "version": "1.0",
   "icons": {
@@ -21,10 +21,10 @@
   ],
   "action": {
     "default_icon": "images/icon-128x128.png",
-    "default_title": "Gatling browser extension",
-    "default_popup": "popup.html"
+    "default_title": "Gatling Browser Extension",
+    "default_popup": "index.html"
   },
   "background": {
-    "service_worker": "src/background.js"
+    "service_worker": "background/index.js"
   }
 }

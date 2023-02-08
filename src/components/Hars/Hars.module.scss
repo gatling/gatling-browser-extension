@@ -1,0 +1,53 @@
+$frontline-color-purple: #6161d6;
+$frontline-color-red: #f15b4f;
+$frontline-color-white: #ffffff;
+
+.headerCell {
+  text-align: start;
+}
+
+.filename {
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.deleteButton, .downloadButton {
+  background-color: $frontline-color-white;
+  border-radius: 4px;
+  padding: 8px;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  &:not(:disabled) {
+    &:hover, &:active {
+      color: $frontline-color-white;
+    }
+  }
+}
+
+.deleteButton {
+  color: $frontline-color-red;
+  border: 1px solid $frontline-color-red;
+
+  &:not(:disabled) {
+    &:hover, &:active {
+      background-color: $frontline-color-red;
+    }
+  }
+}
+
+.downloadButton {
+  color: $frontline-color-purple;
+  border: 1px solid $frontline-color-purple;
+
+  &:not(:disabled) {
+    &:hover, &:active {
+      background-color: $frontline-color-purple;
+    }
+  }
+}

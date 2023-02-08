@@ -1,0 +1,19 @@
+.successButton, .dangerButton {
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  white-space: nowrap;
+}
+
+.successButton:hover, .dangerButton:hover {
+  cursor: pointer;
+}
+
+.successButton {
+  background-color: #68b65c;
+}
+
+.dangerButton {
+  background-color: #f15b4f;
+}
