@@ -1,0 +1,12 @@
+# IntelliJ
+.idea
+*.iml
+
+# OSX
+.DS_Store
+
+# NPM
+node_modules
+package-lock.json
+
+dist

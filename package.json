@@ -1,0 +1,13 @@
+{
+  "name": "gatling-browser-extension",
+  "version": "1.0.0",
+  "description": "todo",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "0.0.206"
+  },
+  "dependencies": {
+    "webextension-polyfill": "0.10.0"
+  }
+}
