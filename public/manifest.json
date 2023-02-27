@@ -21,10 +21,7 @@
   ],
   "action": {
     "default_icon": "images/icon-128x128.png",
-    "default_title": "Gatling Browser Extension",
-    "default_popup": "index.html"
+    "default_title": "Gatling Browser Extension"
   },
-  "background": {
-    "service_worker": "background/index.js"
-  }
+  "devtools_page": "devtools.html"
 }

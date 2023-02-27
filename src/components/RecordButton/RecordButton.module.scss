@@ -1,9 +1,9 @@
 .successButton, .dangerButton {
-  color: #fff;
   border: none;
   border-radius: 4px;
   padding: 8px;
   white-space: nowrap;
+  width: fit-content;
 }
 
 .successButton:hover, .dangerButton:hover {
@@ -11,9 +11,19 @@
 }
 
 .successButton {
-  background-color: #68b65c;
+  background-color: var(--button-success-background-color);
+  color: var(--button-success-text-color);
+
+  &:hover {
+    background-color: var(--button-success-background-color-hover);
+  }
 }
 
 .dangerButton {
-  background-color: #f15b4f;
+  background-color: var(--button-danger-background-color);
+  color: var(--button-danger-text-color);
+
+  &:hover {
+    background-color: var(--button-danger-background-color-hover);
+  }
 }

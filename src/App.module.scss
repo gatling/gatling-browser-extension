@@ -1,3 +1,77 @@
+:root {
+  color-scheme: dark light;
+
+  --logo: url("/images/logo.svg");
+
+  --gatling-color-primary-500: #6161d6;
+  --gatling-color-primary-400: #8888DD;
+
+  --gatling-color-success-500: #68B65C;
+  --gatling-color-success-400: #A1D698;
+
+  --gatling-color-error-500: #E72313;
+  --gatling-color-error-400: #F15555;
+
+  --black: #1F2024;
+  --white: #ffffff;
+
+  --background-color: var(--white);
+  --text-color: var(--black);
+
+  --button-success-background-color: var(--gatling-color-success-500);
+  --button-success-background-color-hover: var(--gatling-color-success-400);
+  --button-success-text-color: var(--white);
+  --button-danger-background-color: var(--gatling-color-error-500);
+  --button-danger-background-color-hover: var(--gatling-color-error-400);
+  --button-danger-text-color: var(--white);
+
+  --button-outline-primary-background-color: var(--white);
+  --button-outline-primary-text-color: var(--gatling-color-primary-500);
+  --button-outline-primary-background-color-hover: var(--button-outline-primary-text-color);
+  --button-outline-primary-text-color-hover: var(--button-outline-primary-background-color);
+  --button-outline-primary-border-color: var(--button-outline-primary-text-color);
+
+  --button-outline-danger-background-color: var(--white);
+  --button-outline-danger-text-color: var(--gatling-color-error-500);
+  --button-outline-danger-background-color-hover: var(--button-outline-danger-text-color);
+  --button-outline-danger-text-color-hover: var(--button-outline-danger-background-color);
+  --button-outline-danger-border-color: var(--button-outline-danger-text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --logo: url("/images/logo-dark.svg");
+
+    --background-color: var(--black);
+    --text-color: var(--white);
+
+    --button-success-background-color: var(--gatling-color-success-400);
+    --button-success-background-color-hover: var(--gatling-color-success-500);
+    --button-success-text-color: var(--black);
+
+    --button-danger-background-color: var(--gatling-color-error-400);
+    --button-danger-background-color-hover: var(--gatling-color-error-500);
+    --button-danger-text-color: var(--black);
+
+    --button-outline-primary-background-color: var(--black);
+    --button-outline-primary-text-color: var(--gatling-color-primary-400);
+    --button-outline-primary-background-color-hover: var(--button-outline-primary-text-color);
+    --button-outline-primary-text-color-hover: var(--button-outline-primary-background-color);
+    --button-outline-primary-border-color: var(--button-outline-primary-text-color);
+
+    --button-outline-danger-background-color: var(--black);
+    --button-outline-danger-text-color: var(--gatling-color-error-400);
+    --button-outline-danger-background-color-hover: var(--button-outline-danger-text-color);
+    --button-outline-danger-text-color-hover: var(--button-outline-danger-background-color);
+    --button-outline-danger-border-color: var(--button-outline-danger-text-color);
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -5,6 +79,7 @@
 }
 
 .logo {
+  background: var(--logo) no-repeat;
   width: auto;
-  height: 1rem;
+  height: 3rem;
 }

@@ -1,45 +1,45 @@
-import { type ReactElement, useCallback, useEffect, useState } from "react";
+import { type ReactElement, useCallback, useState } from "react";
 
 import Alert from "@src/components/Alert";
 import Hars from "@src/components/Hars";
-import RecordButton, { RecordingState } from "@src/components/RecordButton";
-import { INIT, RECORDING, RECORDING_ACTIVE, RECORDING_INACTIVE, TOGGLE_RECORD_BUTTON, UPDATE_HAR_LIST } from "@src/constants";
+import RecordButton from "@src/components/RecordButton";
 import { HarItem } from "@src/interfaces/HarItem";
 import logo from "@src/images/logo.svg"
 
 import styles from "./App.module.scss";
+import { startRecording, stopRecording } from "@src/utils/devtools";
 
 const App = (): ReactElement => {
-  const [state, setState] = useState<RecordingState>("inactive");
-  const [hars, setHars] = useState<HarItem[]>([]);
+  const [recording, setRecording] = useState(false);
+  const [records, setRecords] = useState<HarItem[]>([]);
 
-  const handleClick = useCallback(() => {
-    chrome.runtime.sendMessage({ action: TOGGLE_RECORD_BUTTON })
+  const handleClick = useCallback((recording: boolean) => {
+    console.log("handleClick recording:", recording);
+    console.log("handleClick records:", records);
+    if (recording) {
+      const newHar = stopRecording()
+      console.log("newHar:", newHar);
+      setRecords(oldRecords => [...oldRecords, newHar]);
+    } else {
+      startRecording()
+    }
+
+    setRecording(prevState => !prevState)
   }, []);
 
-  useEffect(() => {
-    chrome.runtime.onMessage.addListener(
-      (request) => {
-        if (request.action === RECORDING) {
-          if (request.value === RECORDING_ACTIVE) {
-            setState("active");
-          } else if (request.value === RECORDING_INACTIVE) {
-            setState("inactive");
-          }
-        } else if (request.action === UPDATE_HAR_LIST) {
-          setHars(request.value);
-        }
-      })
+  const handleClickDelete = useCallback((id: string) => {
+    setRecords(prevState => prevState.filter(item => item.id !== id))
+  }, [])
 
-    chrome.runtime.sendMessage({ action: INIT })
-  }, []);
+  console.log("recording:", recording);
+  console.log("records:", records);
 
   return (
     <div className={styles.container}>
-      <img className={styles.logo} alt="Gatling logo" src={logo} />
-      <RecordButton state={state} onClick={handleClick}/>
-      {state === "active" && <Alert variant="info">Recording has started!</Alert>}
-       {hars?.length > 0 && <Hars hars={hars} />}
+      <div className={styles.logo} />
+      <RecordButton onClick={() => handleClick(recording)} recording={recording}/>
+      {recording && <Alert variant="info">Recording has started!</Alert>}
+       {records?.length > 0 && <Hars items={records} onClickDelete={handleClickDelete} />}
     </div>
   )
 }

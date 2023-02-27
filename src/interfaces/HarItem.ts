@@ -1,8 +1,8 @@
-import { HarLegacy } from "@src/interfaces/HarLegacy";
+import { Request } from "@src/interfaces/Request";
 
 export interface HarItem {
   id: string;
   date: string;
   domain: string;
-  har: HarLegacy;
+  requests: Request[];
 }

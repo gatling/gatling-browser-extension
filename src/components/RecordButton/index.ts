@@ -1,1 +1,1 @@
-export { default, type RecordButtonProps, type RecordingState } from "./RecordButton";
+export { default, type RecordButtonProps } from "./RecordButton";
