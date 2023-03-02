@@ -1,1 +1,1 @@
-export type Request = chrome.devtools.network.Request
+export type Request = chrome.devtools.network.Request;

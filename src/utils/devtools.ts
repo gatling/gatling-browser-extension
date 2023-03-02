@@ -1,12 +1,12 @@
-import { Request } from "@src/interfaces/Request"
-import { HarItem } from "@src/interfaces/HarItem";
+import { type HarItem } from "@src/interfaces/HarItem";
+import { type Request } from "@src/interfaces/Request";
 import { formatDate } from "@src/utils/date";
 
 let currentHarItem: HarItem;
 
 const onRequestFinishedListener = (request: Request): void => {
   if (currentHarItem.requests.length === 0 && request.request.url) {
-    currentHarItem.domain = new URL(request.request.url).hostname
+    currentHarItem.domain = new URL(request.request.url).hostname;
   }
 
   request.getContent((content) => {
@@ -14,9 +14,9 @@ const onRequestFinishedListener = (request: Request): void => {
       request.response.content.text = content;
     }
 
-    currentHarItem.requests.push(request)
-  })
-}
+    currentHarItem.requests.push(request);
+  });
+};
 
 export const startRecording = (): void => {
   const date = formatDate(new Date());
@@ -25,13 +25,17 @@ export const startRecording = (): void => {
     id: date,
     date,
     domain: "no-domain",
-    requests: []
-  }
+    requests: [],
+  };
 
-  chrome.devtools.network.onRequestFinished.addListener(onRequestFinishedListener);
-}
+  chrome.devtools.network.onRequestFinished.addListener(
+    onRequestFinishedListener
+  );
+};
 
 export const stopRecording = (): HarItem => {
-  chrome.devtools.network.onRequestFinished.removeListener(onRequestFinishedListener);
+  chrome.devtools.network.onRequestFinished.removeListener(
+    onRequestFinishedListener
+  );
   return currentHarItem;
-}
+};

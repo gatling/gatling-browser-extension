@@ -9,8 +9,15 @@ export interface AlertProps {
   variant: "info" | "danger" | "success" | "warning";
 }
 
-const Alert = ({ children, className, variant }: PropsWithChildren<AlertProps>): ReactElement => (
-  <div role="alert" className={classNames(styles.container, styles[variant], className)}>
+const Alert = ({
+  children,
+  className,
+  variant,
+}: PropsWithChildren<AlertProps>): ReactElement => (
+  <div
+    role="alert"
+    className={classNames(styles.container, styles[variant], className)}
+  >
     <div className={styles.content}>{children}</div>
   </div>
 );

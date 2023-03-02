@@ -1,4 +1,4 @@
-import { Request } from "@src/interfaces/Request";
+import { type Request } from "@src/interfaces/Request";
 
 export interface HarItem {
   id: string;
