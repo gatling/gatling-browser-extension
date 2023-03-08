@@ -1,3 +1,5 @@
+import { Request } from "@src/interfaces/Request";
+
 const addLeadingZeros = (n: number): string => {
   if (n <= 9) {
     return "0" + n;
@@ -17,3 +19,9 @@ export const formatDate = (currentDatetime: Date): string =>
   addLeadingZeros(currentDatetime.getMinutes()) +
   "-" +
   addLeadingZeros(currentDatetime.getSeconds());
+
+export const sortRequestsByDate = (a: Request, b: Request): number => {
+  const startedDateTimeA = new Date(a.startedDateTime).getTime();
+  const startedDateTimeB = new Date(b.startedDateTime).getTime();
+  return startedDateTimeA - startedDateTimeB;
+}
