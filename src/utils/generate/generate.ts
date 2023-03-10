@@ -2,6 +2,7 @@ import { type Request } from "@src/interfaces/Request";
 import { RecorderConfiguration } from "@src/interfaces/RecorderConfiguration";
 import { sortRequestsByDate } from "@src/utils/date";
 import { mergeRedirectionRequests } from "@src/utils/generate/redirection";
+import { groupRequests } from "@src/utils/generate/group";
 
 const generate = (entries: Request[], configuration: RecorderConfiguration): string => {
   // Specifications: https://gatlingcorp.atlassian.net/browse/RND-17
@@ -29,6 +30,7 @@ const generate = (entries: Request[], configuration: RecorderConfiguration): str
   //   - else, this request is the start of a new group
   // - move to the next request and so on
   // TODO
+  const groupedRequests = groupRequests(filteredRedirection);
 
   // Step #4: handle HTML resources
   // Note sure if it’s (easy) feasible.
@@ -85,4 +87,6 @@ const generate = (entries: Request[], configuration: RecorderConfiguration): str
   // Collect identical header groups and sort them by first occurrence.
   // Make each request point to its corresponding group.
   // TODO
+
+  return "";
 }
