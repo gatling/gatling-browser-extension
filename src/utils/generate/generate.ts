@@ -1,22 +1,28 @@
+import { type RecorderConfiguration } from "@src/interfaces/RecorderConfiguration";
 import { type Request } from "@src/interfaces/Request";
-import { RecorderConfiguration } from "@src/interfaces/RecorderConfiguration";
 import { sortRequestsByDate } from "@src/utils/date";
-import { mergeRedirectionRequests } from "@src/utils/generate/redirection";
 import { groupRequests } from "@src/utils/generate/group";
+import { interResources } from "@src/utils/generate/inferHtmlResources";
+import { mergeRedirectionRequests } from "@src/utils/generate/redirection";
 
-const generate = (entries: Request[], configuration: RecorderConfiguration): string => {
+const generate = (
+  entries: Request[],
+  configuration: RecorderConfiguration
+): string => {
   // Specifications: https://gatlingcorp.atlassian.net/browse/RND-17
 
   // Step #1: sort
   // Sort all requests by start timestamp asc
-  const sortedEntries = [...entries].sort(sortRequestsByDate)
+  const sortedEntries = [...entries].sort(sortRequestsByDate);
 
   // Step #2: merge redirects
   // If the followRedirect option is enabled (default behavior), merge redirect chains into 1 single request:
   //   - url, request headers and request body of the first request
   //   - status and response body of the last one
   // TODO
-  const filteredRedirection = configuration.http.followRedirect ? mergeRedirectionRequests(sortedEntries) : sortedEntries
+  const filteredRedirection = configuration.http.followRedirect
+    ? mergeRedirectionRequests(sortedEntries)
+    : sortedEntries;
 
   // Step #3: group requests by blocks
   // We need to determine what’s a root request and what is a resources.
@@ -36,7 +42,9 @@ const generate = (entries: Request[], configuration: RecorderConfiguration): str
   // Note sure if it’s (easy) feasible.
   // If the inferHtmlResources option is enabled (NON default behavior), filter out requests of resources that are present in the HTML response bodies.
   // This requires being able to parse HTML and CSS payloads. I expect that we won’t be able to implement this at first and might be saved for later.
-  // TODO
+  const filteredGroupedRequests = configuration.http.inferHtmlResources
+    ? interResources(groupedRequests)
+    : groupedRequests;
 
   // Step #5: determine the baseUrl
   // For each requests block, the head is the root request and the tail is the resources.
@@ -89,4 +97,4 @@ const generate = (entries: Request[], configuration: RecorderConfiguration): str
   // TODO
 
   return "";
-}
+};
