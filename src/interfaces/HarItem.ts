@@ -1,8 +1,8 @@
-import { type Request } from "@src/interfaces/Request";
+import { type Entry } from "@src/interfaces/Entry";
 
 export interface HarItem {
   id: string;
   date: string;
   domain: string;
-  requests: Request[];
+  requests: Entry[];
 }

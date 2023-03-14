@@ -1,7 +1,7 @@
 import { mergeRedirectionRequests } from "./redirection";
-import { SimpleRequest } from "@src/interfaces/Request";
+import { SimpleEntry } from "@src/interfaces/Entry";
 
-const entry1: SimpleRequest = {
+const entry1: SimpleEntry = {
   "cache": {},
   "request": {
     "method": "GET",
@@ -150,7 +150,7 @@ const entry1: SimpleRequest = {
 };
 
 
-const entry2: SimpleRequest = {
+const entry2: SimpleEntry = {
   "cache": {},
   "request": {
     "method": "GET",
@@ -351,7 +351,7 @@ const entry2: SimpleRequest = {
   }
 };
 
-const entry3: SimpleRequest = {
+const entry3: SimpleEntry = {
   "cache": {},
   "request": {
     "method": "GET",
@@ -500,7 +500,7 @@ const entry3: SimpleRequest = {
   }
 }
 
-const entry4: SimpleRequest = {
+const entry4: SimpleEntry = {
   "cache": {},
   "request": {
     "method": "GET",
@@ -700,7 +700,7 @@ const entry4: SimpleRequest = {
   }
 };
 
-const entry5: SimpleRequest = {
+const entry5: SimpleEntry = {
   "cache": {},
   "request": {
     "method": "GET",
@@ -845,7 +845,7 @@ const entry5: SimpleRequest = {
   }
 }
 
-const mergedEntry234: SimpleRequest = {
+const mergedEntry234: SimpleEntry = {
   ...entry2,
   response: entry4.response
 }

@@ -1,4 +1,4 @@
-import { GroupedRequest, SimpleRequest } from "@src/interfaces/Request";
+import { GroupedEntry, SimpleEntry } from "@src/interfaces/Entry";
 // Step #3: group requests by blocks
 // We need to determine what’s a root request and what is a resources.
 // As we have no way to tell exactly, we use an empirical (hence non-perfect) algorithm:
@@ -14,7 +14,7 @@ import { GroupedRequest, SimpleRequest } from "@src/interfaces/Request";
 
 export const TIMESTAMP_100_MS = 250;
 
-const createNewGroup = (entry: SimpleRequest): GroupedRequest => {
+const createNewGroup = (entry: SimpleEntry): GroupedEntry => {
   const sendTime = new Date(entry.startedDateTime).getTime();
   return {
     root: entry,
@@ -24,9 +24,9 @@ const createNewGroup = (entry: SimpleRequest): GroupedRequest => {
   }
 };
 
-export const groupRequests = (entries: SimpleRequest[]): GroupedRequest[] => {
-  const groupedRequests: GroupedRequest[] = [];
-  let currentGroupedRequest: GroupedRequest | null = null;
+export const groupRequests = (entries: SimpleEntry[]): GroupedEntry[] => {
+  const groupedRequests: GroupedEntry[] = [];
+  let currentGroupedRequest: GroupedEntry | null = null;
 
   entries.forEach(entry => {
     if (currentGroupedRequest === null) {

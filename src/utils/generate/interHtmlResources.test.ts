@@ -1,4 +1,4 @@
-import { type GroupedRequest } from "@src/interfaces/Request";
+import { type GroupedEntry } from "@src/interfaces/Entry";
 import { TIMESTAMP_100_MS } from "@src/utils/generate/group";
 import {
   entry1,
@@ -47,7 +47,7 @@ describe("getResourcesFromHtml", () => {
   });
 });
 
-const GROUP1: GroupedRequest = {
+const GROUP1: GroupedEntry = {
   sendTime: new Date(entry1.startedDateTime).getTime(),
   arrivalTime:
     new Date(entry12analytics.startedDateTime).getTime() + TIMESTAMP_100_MS,
@@ -73,9 +73,9 @@ const GROUP1: GroupedRequest = {
   ],
 };
 
-const GROUPED_REQUESTS: GroupedRequest[] = [GROUP1];
+const GROUPED_REQUESTS: GroupedEntry[] = [GROUP1];
 
-const EXPECTED_FILTERED_REQUESTS: GroupedRequest[] = [
+const EXPECTED_FILTERED_REQUESTS: GroupedEntry[] = [
   {
     ...GROUP1,
     resources: [entry10analytics, entry12analytics],

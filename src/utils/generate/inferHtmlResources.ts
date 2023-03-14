@@ -1,6 +1,6 @@
 import { JSDOM } from "jsdom";
 
-import { type GroupedRequest } from "@src/interfaces/Request";
+import { type GroupedEntry } from "@src/interfaces/Entry";
 
 export const getResourcesFromHtml = (body: string): string[] => {
   const dom = new JSDOM(body);
@@ -18,8 +18,8 @@ export const getResourcesFromHtml = (body: string): string[] => {
 
 const filterResourcesFromHtml = (
   contentText: string,
-  request: GroupedRequest
-): GroupedRequest => {
+  request: GroupedEntry
+): GroupedEntry => {
   const resources = getResourcesFromHtml(contentText);
   const resourcesWithHostname = resources.map((r) =>
     !r.startsWith("http://") || !r.startsWith("https://")
@@ -36,8 +36,8 @@ const filterResourcesFromHtml = (
 };
 
 export const interResources = (
-  groupedRequests: GroupedRequest[]
-): GroupedRequest[] => {
+  groupedRequests: GroupedEntry[]
+): GroupedEntry[] => {
   return groupedRequests.map((request) => {
     const contentText = request.root.response.content.text;
     return contentText

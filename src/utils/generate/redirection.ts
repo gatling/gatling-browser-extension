@@ -1,10 +1,10 @@
-import { type SimpleRequest } from "@src/interfaces/Request";
+import { type SimpleEntry } from "@src/interfaces/Entry";
 import { isRedirection } from "@src/utils/generate/http";
 
-export const groupRedirectionRequests = (entries: SimpleRequest[]): SimpleRequest[][] => {
+export const groupRedirectionRequests = (entries: SimpleEntry[]): SimpleEntry[][] => {
 
-  const mergedEntries: SimpleRequest[][] = [];
-  let redirectionGroup: SimpleRequest[] = []
+  const mergedEntries: SimpleEntry[][] = [];
+  let redirectionGroup: SimpleEntry[] = []
 
   entries.forEach((entry) => {
     if (isRedirection(entry.response.status)) {
@@ -23,7 +23,7 @@ export const groupRedirectionRequests = (entries: SimpleRequest[]): SimpleReques
   return mergedEntries
 }
 
-export const mergeRedirectionRequests = (entries: SimpleRequest[]): SimpleRequest[] => {
+export const mergeRedirectionRequests = (entries: SimpleEntry[]): SimpleEntry[] => {
 
   const groupedRedirectionRequests = groupRedirectionRequests(entries)
 

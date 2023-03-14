@@ -1,12 +1,13 @@
 import { type RecorderConfiguration } from "@src/interfaces/RecorderConfiguration";
-import { type Request } from "@src/interfaces/Request";
+import { type Entry } from "@src/interfaces/Entry";
 import { sortRequestsByDate } from "@src/utils/date";
 import { groupRequests } from "@src/utils/generate/group";
 import { interResources } from "@src/utils/generate/inferHtmlResources";
 import { mergeRedirectionRequests } from "@src/utils/generate/redirection";
+import { addUrls } from "@src/utils/generate/url";
 
 const generate = (
-  entries: Request[],
+  entries: Entry[],
   configuration: RecorderConfiguration
 ): string => {
   // Specifications: https://gatlingcorp.atlassian.net/browse/RND-17
@@ -19,7 +20,6 @@ const generate = (
   // If the followRedirect option is enabled (default behavior), merge redirect chains into 1 single request:
   //   - url, request headers and request body of the first request
   //   - status and response body of the last one
-  // TODO
   const filteredRedirection = configuration.http.followRedirect
     ? mergeRedirectionRequests(sortedEntries)
     : sortedEntries;
@@ -35,22 +35,21 @@ const generate = (
   //
   //   - else, this request is the start of a new group
   // - move to the next request and so on
-  // TODO
-  const groupedRequests = groupRequests(filteredRedirection);
+  const groupedEntries = groupRequests(filteredRedirection);
 
   // Step #4: handle HTML resources
   // Note sure if it’s (easy) feasible.
   // If the inferHtmlResources option is enabled (NON default behavior), filter out requests of resources that are present in the HTML response bodies.
   // This requires being able to parse HTML and CSS payloads. I expect that we won’t be able to implement this at first and might be saved for later.
-  const filteredGroupedRequests = configuration.http.inferHtmlResources
-    ? interResources(groupedRequests)
-    : groupedRequests;
+  const filteredGroupedEntries = configuration.http.inferHtmlResources
+    ? interResources(groupedEntries)
+    : groupedEntries;
 
   // Step #5: determine the baseUrl
   // For each requests block, the head is the root request and the tail is the resources.
   // The baseUrl is the most frequent scheme + domain of all the root requests.
   // Store this baseUrl and turn all the requests that start with it into relative ones.
-  // TODO
+  const simulation = addUrls(filteredGroupedEntries)
 
   // Step #6: determine common urls
   // For each remaining requests, extract scheme + domain strings.

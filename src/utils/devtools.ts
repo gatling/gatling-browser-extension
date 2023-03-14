@@ -1,10 +1,10 @@
+import { type Entry } from "@src/interfaces/Entry";
 import { type HarItem } from "@src/interfaces/HarItem";
-import { type Request } from "@src/interfaces/Request";
 import { formatDate } from "@src/utils/date";
 
 let currentHarItem: HarItem;
 
-const onRequestFinishedListener = (request: Request): void => {
+const onRequestFinishedListener = (request: Entry): void => {
   if (currentHarItem.requests.length === 0 && request.request.url) {
     currentHarItem.domain = new URL(request.request.url).hostname;
   }

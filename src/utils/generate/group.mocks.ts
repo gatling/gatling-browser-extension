@@ -1,6 +1,6 @@
-import { SimpleRequest } from "@src/interfaces/Request";
+import { SimpleEntry } from "@src/interfaces/Entry";
 
-export const entry1: SimpleRequest = {
+export const entry1: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:21.693+01:00",
   "request": {
     "bodySize": 0,
@@ -174,7 +174,7 @@ export const entry1: SimpleRequest = {
   "connection": "443"
 }
 
-export const entry2bundle: SimpleRequest = {
+export const entry2bundle: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:21.887+01:00",
   "request": {
     "bodySize": 0,
@@ -338,7 +338,7 @@ export const entry2bundle: SimpleRequest = {
   "_securityState": "secure"
 }
 
-export const entry3logoSvg: SimpleRequest = {
+export const entry3logoSvg: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:21.888+01:00",
   "request": {
     "bodySize": 0,
@@ -412,7 +412,7 @@ export const entry3logoSvg: SimpleRequest = {
   "time": 0
 }
 
-export const entry4logoSvg: SimpleRequest = {
+export const entry4logoSvg: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:21.888+01:00",
   "request": {
     "bodySize": 0,
@@ -486,7 +486,7 @@ export const entry4logoSvg: SimpleRequest = {
   "time": 0
 }
 
-export const entry5serliPng: SimpleRequest = {
+export const entry5serliPng: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:21.889+01:00",
   "request": {
     "bodySize": 0,
@@ -560,7 +560,7 @@ export const entry5serliPng: SimpleRequest = {
   "time": 0
 }
 
-export const entry6serli2Png: SimpleRequest = {
+export const entry6serli2Png: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:21.889+01:00",
   "request": {
     "bodySize": 0,
@@ -634,7 +634,7 @@ export const entry6serli2Png: SimpleRequest = {
   "time": 0
 }
 
-export const entry7serliJpg: SimpleRequest = {
+export const entry7serliJpg: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:21.889+01:00",
   "request": {
     "bodySize": 0,
@@ -707,7 +707,7 @@ export const entry7serliJpg: SimpleRequest = {
   "time": 0
 }
 
-export const entry8upPng: SimpleRequest = {
+export const entry8upPng: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:21.889+01:00",
   "request": {
     "bodySize": 0,
@@ -781,7 +781,7 @@ export const entry8upPng: SimpleRequest = {
   "time": 0
 }
 
-export const entry9upPng: SimpleRequest = {
+export const entry9upPng: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:21.889+01:00",
   "request": {
     "bodySize": 0,
@@ -853,7 +853,7 @@ export const entry9upPng: SimpleRequest = {
   "time": 0
 }
 
-export const entry10analytics: SimpleRequest = {
+export const entry10analytics: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:21.905+01:00",
   "request": {
     "bodySize": 0,
@@ -1007,7 +1007,7 @@ export const entry10analytics: SimpleRequest = {
 }
 
 
-export const entry11faviconPng: SimpleRequest = {
+export const entry11faviconPng: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:21.922+01:00",
   "request": {
     "bodySize": 0,
@@ -1163,7 +1163,7 @@ export const entry11faviconPng: SimpleRequest = {
   "_securityState": "secure"
 }
 
-export const entry12analytics: SimpleRequest = {
+export const entry12analytics: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:21.926+01:00",
   "request": {
     "bodySize": 0,
@@ -1416,7 +1416,7 @@ export const entry12analytics: SimpleRequest = {
   "connection": "443"
 }
 
-export const entry13pagePresentation: SimpleRequest = {
+export const entry13pagePresentation: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:22.941+01:00",
   "request": {
     "bodySize": 0,
@@ -1599,7 +1599,7 @@ export const entry13pagePresentation: SimpleRequest = {
 }
 
 
-export const entry14bundlePresentation: SimpleRequest = {
+export const entry14bundlePresentation: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:23.057+01:00",
   "request": {
     "bodySize": 0,
@@ -1766,7 +1766,7 @@ export const entry14bundlePresentation: SimpleRequest = {
   "_securityState": "secure"
 }
 
-export const entry15presentationAnalytics: SimpleRequest = {
+export const entry15presentationAnalytics: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:23.074+01:00",
   "request": {
     "bodySize": 0,
@@ -1919,7 +1919,7 @@ export const entry15presentationAnalytics: SimpleRequest = {
   "_securityState": "secure"
 }
 
-export const entry16presentationFavicon: SimpleRequest = {
+export const entry16presentationFavicon: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:23.076+01:00",
   "request": {
     "bodySize": 0,
@@ -2078,7 +2078,7 @@ export const entry16presentationFavicon: SimpleRequest = {
   "_securityState": "secure"
 }
 
-export const entry17presentationAnalytics2: SimpleRequest = {
+export const entry17presentationAnalytics2: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:23.085+01:00",
   "request": {
     "bodySize": 0,
@@ -2326,12 +2326,12 @@ export const entry17presentationAnalytics2: SimpleRequest = {
   "connection": "443"
 }
 
-export const entry18pageFaq: SimpleRequest = {
+export const entry18pageFaq: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:23.790+01:00",
   "request": {
     "bodySize": 0,
     "method": "GET",
-    "url": "https://pwn-association.org/faq/",
+    "url": "https://other-site-example.net/faq/",
     "httpVersion": "HTTP/2",
     "headers": [{
       "name": "test",
@@ -2339,7 +2339,7 @@ export const entry18pageFaq: SimpleRequest = {
     },
       {
         "name": "Host",
-        "value": "pwn-association.org"
+        "value": "other-site-example.net"
       },
       {
         "name": "User-Agent",
@@ -2363,7 +2363,7 @@ export const entry18pageFaq: SimpleRequest = {
       },
       {
         "name": "Referer",
-        "value": "https://pwn-association.org/presentation/"
+        "value": "https://other-site-example.net/presentation/"
       },
       {
         "name": "Cookie",
@@ -2506,12 +2506,12 @@ export const entry18pageFaq: SimpleRequest = {
   "connection": "443"
 }
 
-export const entry19faqBundle: SimpleRequest = {
+export const entry19faqBundle: SimpleEntry = {
   "startedDateTime": "2023-03-09T18:07:23.903+01:00",
   "request": {
     "bodySize": 0,
     "method": "GET",
-    "url": "https://pwn-association.org/static/core/js/app.js",
+    "url": "https://other-site-example.net/static/core/js/app.js",
     "httpVersion": "HTTP/2",
     "headers": [{
       "name": "test",
@@ -2519,7 +2519,7 @@ export const entry19faqBundle: SimpleRequest = {
     },
       {
         "name": "Host",
-        "value": "pwn-association.org"
+        "value": "other-site-example.net"
       },
       {
         "name": "User-Agent",
@@ -2543,7 +2543,7 @@ export const entry19faqBundle: SimpleRequest = {
       },
       {
         "name": "Referer",
-        "value": "https://pwn-association.org/faq/"
+        "value": "https://other-site-example.net/faq/"
       },
       {
         "name": "Cookie",

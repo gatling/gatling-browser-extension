@@ -9,6 +9,8 @@ const config: Config.InitialOptions = {
   transformIgnorePatterns: ["node_modules/(?!lodash-es|d3|internmap|delaunator|robust-predicates|axios)"],
   moduleNameMapper: {
     "@src(.*)$": "<rootDir>/$1",
+    '^lodash-es$': 'lodash',
+    '^lodash-es/cloneDeep$': 'lodash/cloneDeep',
     "\\.(css|scss)$": "identity-obj-proxy"
   }
 };
