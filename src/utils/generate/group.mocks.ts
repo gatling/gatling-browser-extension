@@ -2331,7 +2331,7 @@ export const entry18pageFaq: SimpleRequest = {
   "request": {
     "bodySize": 0,
     "method": "GET",
-    "url": "https://pwn-association.org/faq/",
+    "url": "https://other-site-example.net/faq/",
     "httpVersion": "HTTP/2",
     "headers": [{
       "name": "test",
@@ -2339,7 +2339,7 @@ export const entry18pageFaq: SimpleRequest = {
     },
       {
         "name": "Host",
-        "value": "pwn-association.org"
+        "value": "other-site-example.net"
       },
       {
         "name": "User-Agent",
@@ -2363,7 +2363,7 @@ export const entry18pageFaq: SimpleRequest = {
       },
       {
         "name": "Referer",
-        "value": "https://pwn-association.org/presentation/"
+        "value": "https://other-site-example.net/presentation/"
       },
       {
         "name": "Cookie",
@@ -2511,7 +2511,7 @@ export const entry19faqBundle: SimpleRequest = {
   "request": {
     "bodySize": 0,
     "method": "GET",
-    "url": "https://pwn-association.org/static/core/js/app.js",
+    "url": "https://other-site-example.net/static/core/js/app.js",
     "httpVersion": "HTTP/2",
     "headers": [{
       "name": "test",
@@ -2519,7 +2519,7 @@ export const entry19faqBundle: SimpleRequest = {
     },
       {
         "name": "Host",
-        "value": "pwn-association.org"
+        "value": "other-site-example.net"
       },
       {
         "name": "User-Agent",
@@ -2543,7 +2543,7 @@ export const entry19faqBundle: SimpleRequest = {
       },
       {
         "name": "Referer",
-        "value": "https://pwn-association.org/faq/"
+        "value": "https://other-site-example.net/faq/"
       },
       {
         "name": "Cookie",

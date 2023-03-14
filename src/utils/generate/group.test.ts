@@ -45,7 +45,7 @@ const GROUP3: GroupedRequest = {
   resources: [entry19faqBundle]
 }
 
-export const RESULT: GroupedRequest[] = [
+export const GROUPED_REQUESTS: GroupedRequest[] = [
   GROUP1,
   GROUP2,
   GROUP3
@@ -53,6 +53,6 @@ export const RESULT: GroupedRequest[] = [
 
 describe("groupRequests", () => {
   it("should return 3 groups", () => {
-    expect(groupRequests(UNGROUPED_REQUESTS)).toEqual(RESULT);
+    expect(groupRequests(UNGROUPED_REQUESTS)).toEqual(GROUPED_REQUESTS);
   });
 });

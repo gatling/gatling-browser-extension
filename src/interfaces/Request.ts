@@ -8,3 +8,8 @@ export interface GroupedRequest {
   root: SimpleRequest;
   resources: SimpleRequest[]
 }
+
+export interface Simulation {
+  baseUrl: string;
+  groupedRequests: GroupedRequest[]
+}
