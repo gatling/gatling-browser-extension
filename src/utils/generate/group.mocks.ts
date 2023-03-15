@@ -1,2673 +1,2719 @@
-import { SimpleEntry } from "@src/interfaces/Entry";
+import { type SimpleEntry } from "@src/interfaces/Entry";
 
 export const entry1: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:21.693+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://pwn-association.org/devenir-membre/",
-    "httpVersion": "HTTP/2",
-    "headers": [
+  startedDateTime: "2023-03-09T18:07:21.693+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://pwn-association.org/devenir-membre/",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "test",
-        "value": "entry1-request"
+        name: "test",
+        value: "entry1-request",
       },
       {
-        "name": "Host",
-        "value": "pwn-association.org"
+        name: "Host",
+        value: "pwn-association.org",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept",
-        "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+        name: "Accept",
+        value:
+          "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Connection",
-        "value": "keep-alive"
+        name: "Connection",
+        value: "keep-alive",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/"
+        name: "Referer",
+        value: "https://pwn-association.org/",
       },
       {
-        "name": "Cookie",
-        "value": "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580"
+        name: "Cookie",
+        value:
+          "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580",
       },
       {
-        "name": "Upgrade-Insecure-Requests",
-        "value": "1"
+        name: "Upgrade-Insecure-Requests",
+        value: "1",
       },
       {
-        "name": "Sec-Fetch-Dest",
-        "value": "document"
+        name: "Sec-Fetch-Dest",
+        value: "document",
       },
       {
-        "name": "Sec-Fetch-Mode",
-        "value": "navigate"
+        name: "Sec-Fetch-Mode",
+        value: "navigate",
       },
       {
-        "name": "Sec-Fetch-Site",
-        "value": "same-origin"
+        name: "Sec-Fetch-Site",
+        value: "same-origin",
       },
       {
-        "name": "Sec-Fetch-User",
-        "value": "?1"
-      }
+        name: "Sec-Fetch-User",
+        value: "?1",
+      },
     ],
-    "cookies": [
+    cookies: [
       {
-        "name": "django_language",
-        "value": "fr"
+        name: "django_language",
+        value: "fr",
       },
       {
-        "name": "_ga",
-        "value": "GA1.2.1961057493.1677074927"
+        name: "_ga",
+        value: "GA1.2.1961057493.1677074927",
       },
       {
-        "name": "_gid",
-        "value": "GA1.2.208187854.1678381580"
-      }
+        name: "_gid",
+        value: "GA1.2.208187854.1678381580",
+      },
     ],
-    "queryString": [],
-    "headersSize": 610
+    queryString: [],
+    headersSize: 610,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "HTTP/2",
-    "headers": [
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "test",
-        "value": "entry1-response"
+        name: "test",
+        value: "entry1-response",
       },
       {
-        "name": "date",
-        "value": "Thu, 09 Mar 2023 17:07:21 GMT"
+        name: "date",
+        value: "Thu, 09 Mar 2023 17:07:21 GMT",
       },
       {
-        "name": "server",
-        "value": "Apache"
+        name: "server",
+        value: "Apache",
       },
       {
-        "name": "content-language",
-        "value": "fr"
+        name: "content-language",
+        value: "fr",
       },
       {
-        "name": "expires",
-        "value": "Thu, 09 Mar 2023 17:08:21 GMT"
+        name: "expires",
+        value: "Thu, 09 Mar 2023 17:08:21 GMT",
       },
       {
-        "name": "vary",
-        "value": "Accept-Language,Cookie,Accept-Encoding"
+        name: "vary",
+        value: "Accept-Language,Cookie,Accept-Encoding",
       },
       {
-        "name": "cache-control",
-        "value": "max-age=60"
+        name: "cache-control",
+        value: "max-age=60",
       },
       {
-        "name": "x-frame-options",
-        "value": "SAMEORIGIN"
+        name: "x-frame-options",
+        value: "SAMEORIGIN",
       },
       {
-        "name": "x-xss-protection",
-        "value": "1; mode=block"
+        name: "x-xss-protection",
+        value: "1; mode=block",
       },
       {
-        "name": "x-content-type-options",
-        "value": "nosniff"
+        name: "x-content-type-options",
+        value: "nosniff",
       },
       {
-        "name": "last-modified",
-        "value": "Thu, 09 Mar 2023 17:07:21 GMT"
+        name: "last-modified",
+        value: "Thu, 09 Mar 2023 17:07:21 GMT",
       },
       {
-        "name": "content-encoding",
-        "value": "br"
+        name: "content-encoding",
+        value: "br",
       },
       {
-        "name": "content-type",
-        "value": "text/html; charset=utf-8"
+        name: "content-type",
+        value: "text/html; charset=utf-8",
       },
       {
-        "name": "via",
-        "value": "2.0 alproxy"
+        name: "via",
+        value: "2.0 alproxy",
       },
       {
-        "name": "X-Firefox-Spdy",
-        "value": "h2"
-      }
+        name: "X-Firefox-Spdy",
+        value: "h2",
+      },
     ],
-    "cookies": [],
-    "content": {
-      "mimeType": "text/html; charset=utf-8",
-      "size": 6312,
-      "comment": "Response bodies are not included."
+    cookies: [],
+    content: {
+      mimeType: "text/html; charset=utf-8",
+      size: 6312,
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "headersSize": 446,
-    "bodySize": 2308
+    redirectURL: "",
+    headersSize: 446,
+    bodySize: 2308,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 33,
-    "dns": 0,
-    "connect": 15,
-    "ssl": 19,
-    "send": 0,
-    "wait": 81,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 33,
+    dns: 0,
+    connect: 15,
+    ssl: 19,
+    send: 0,
+    wait: 81,
+    receive: 0,
   },
-  "time": 148,
-  "_securityState": "secure",
-  "serverIPAddress": "2a00:b6e0:1:20:11::1",
-  "connection": "443"
-}
+  time: 148,
+  _securityState: "secure",
+  serverIPAddress: "2a00:b6e0:1:20:11::1",
+  connection: "443",
+};
 
 export const entry2bundle: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:21.887+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://pwn-association.org/static/core/js/app.js",
-    "httpVersion": "HTTP/2",
-    "headers": [
+  startedDateTime: "2023-03-09T18:07:21.887+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://pwn-association.org/static/core/js/app.js",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "test",
-        "value": "entry2-request"
+        name: "test",
+        value: "entry2-request",
       },
       {
-        "name": "Host",
-        "value": "pwn-association.org"
+        name: "Host",
+        value: "pwn-association.org",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept",
-        "value": "*/*"
+        name: "Accept",
+        value: "*/*",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Connection",
-        "value": "keep-alive"
+        name: "Connection",
+        value: "keep-alive",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/devenir-membre/"
+        name: "Referer",
+        value: "https://pwn-association.org/devenir-membre/",
       },
       {
-        "name": "Cookie",
-        "value": "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580"
+        name: "Cookie",
+        value:
+          "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580",
       },
       {
-        "name": "Sec-Fetch-Dest",
-        "value": "script"
+        name: "Sec-Fetch-Dest",
+        value: "script",
       },
       {
-        "name": "Sec-Fetch-Mode",
-        "value": "no-cors"
+        name: "Sec-Fetch-Mode",
+        value: "no-cors",
       },
       {
-        "name": "Sec-Fetch-Site",
-        "value": "same-origin"
-      }
+        name: "Sec-Fetch-Site",
+        value: "same-origin",
+      },
     ],
-    "cookies": [
+    cookies: [
       {
-        "name": "django_language",
-        "value": "fr"
+        name: "django_language",
+        value: "fr",
       },
       {
-        "name": "_ga",
-        "value": "GA1.2.1961057493.1677074927"
+        name: "_ga",
+        value: "GA1.2.1961057493.1677074927",
       },
       {
-        "name": "_gid",
-        "value": "GA1.2.208187854.1678381580"
-      }
+        name: "_gid",
+        value: "GA1.2.208187854.1678381580",
+      },
     ],
-    "queryString": [],
-    "headersSize": 0
+    queryString: [],
+    headersSize: 0,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "HTTP/2",
-    "headers": [
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "test",
-        "value": "entry2-response"
+        name: "test",
+        value: "entry2-response",
       },
       {
-        "name": "date",
-        "value": "Thu, 09 Mar 2023 17:06:20 GMT"
+        name: "date",
+        value: "Thu, 09 Mar 2023 17:06:20 GMT",
       },
       {
-        "name": "server",
-        "value": "Apache"
+        name: "server",
+        value: "Apache",
       },
       {
-        "name": "x-frame-options",
-        "value": "SAMEORIGIN"
+        name: "x-frame-options",
+        value: "SAMEORIGIN",
       },
       {
-        "name": "x-xss-protection",
-        "value": "1; mode=block"
+        name: "x-xss-protection",
+        value: "1; mode=block",
       },
       {
-        "name": "x-content-type-options",
-        "value": "nosniff"
+        name: "x-content-type-options",
+        value: "nosniff",
       },
       {
-        "name": "last-modified",
-        "value": "Thu, 25 May 2017 12:36:15 GMT"
+        name: "last-modified",
+        value: "Thu, 25 May 2017 12:36:15 GMT",
       },
       {
-        "name": "etag",
-        "value": "\"18a23-55058778336c3-br\""
+        name: "etag",
+        value: '"18a23-55058778336c3-br"',
       },
       {
-        "name": "accept-ranges",
-        "value": "bytes"
+        name: "accept-ranges",
+        value: "bytes",
       },
       {
-        "name": "vary",
-        "value": "Accept-Encoding"
+        name: "vary",
+        value: "Accept-Encoding",
       },
       {
-        "name": "content-encoding",
-        "value": "br"
+        name: "content-encoding",
+        value: "br",
       },
       {
-        "name": "content-type",
-        "value": "application/javascript"
+        name: "content-type",
+        value: "application/javascript",
       },
       {
-        "name": "via",
-        "value": "2.0 alproxy"
+        name: "via",
+        value: "2.0 alproxy",
       },
       {
-        "name": "content-length",
-        "value": "33942"
+        name: "content-length",
+        value: "33942",
       },
       {
-        "name": "X-Firefox-Spdy",
-        "value": "h2"
-      }
+        name: "X-Firefox-Spdy",
+        value: "h2",
+      },
     ],
-    "cookies": [],
-    "content": {
-      "mimeType": "application/javascript",
-      "size": 100899,
-      "comment": "Response bodies are not included."
+    cookies: [],
+    content: {
+      mimeType: "application/javascript",
+      size: 100899,
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "headersSize": 0,
-    "bodySize": 33942
+    redirectURL: "",
+    headersSize: 0,
+    bodySize: 33942,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "time": 0,
-  "_securityState": "secure"
-}
+  time: 0,
+  _securityState: "secure",
+};
 
 export const entry3logoSvg: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:21.888+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://pwn-association.org/static/core/img/logo-pwn.svg",
-    "httpVersion": "",
-    "headers": [
+  startedDateTime: "2023-03-09T18:07:21.888+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://pwn-association.org/static/core/img/logo-pwn.svg",
+    httpVersion: "",
+    headers: [
       {
-        "name": "test",
-        "value": "entry3-request"
+        name: "test",
+        value: "entry3-request",
       },
       {
-        "name": "Host",
-        "value": "pwn-association.org"
+        name: "Host",
+        value: "pwn-association.org",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept",
-        "value": "image/avif,image/webp,*/*"
+        name: "Accept",
+        value: "image/avif,image/webp,*/*",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/devenir-membre/"
-      }
+        name: "Referer",
+        value: "https://pwn-association.org/devenir-membre/",
+      },
     ],
-    "cookies": [],
-    "queryString": [],
-    "headersSize": 0
+    cookies: [],
+    queryString: [],
+    headersSize: 0,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "",
-    "headers": [
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "",
+    headers: [
       {
-        "name": "test",
-        "value": "entry3-response"
+        name: "test",
+        value: "entry3-response",
       },
     ],
-    "headersSize": 0,
-    "cookies": [],
-    "content": {
-      "size": 0,
-      "mimeType": "image/svg+xml",
-      "comment": "Response bodies are not included."
+    headersSize: 0,
+    cookies: [],
+    content: {
+      size: 0,
+      mimeType: "image/svg+xml",
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "bodySize": -1
+    redirectURL: "",
+    bodySize: -1,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "time": 0
-}
+  time: 0,
+};
 
 export const entry4logoSvg: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:21.888+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://pwn-association.org/static/core/img/logo-pwn.svg",
-    "httpVersion": "",
-    "headers": [
+  startedDateTime: "2023-03-09T18:07:21.888+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://pwn-association.org/static/core/img/logo-pwn.svg",
+    httpVersion: "",
+    headers: [
       {
-        "name": "test",
-        "value": "entry4-request"
+        name: "test",
+        value: "entry4-request",
       },
       {
-        "name": "Host",
-        "value": "pwn-association.org"
+        name: "Host",
+        value: "pwn-association.org",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept",
-        "value": "image/avif,image/webp,*/*"
+        name: "Accept",
+        value: "image/avif,image/webp,*/*",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/devenir-membre/"
-      }
+        name: "Referer",
+        value: "https://pwn-association.org/devenir-membre/",
+      },
     ],
-    "cookies": [],
-    "queryString": [],
-    "headersSize": 0
+    cookies: [],
+    queryString: [],
+    headersSize: 0,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "",
-    "headers": [
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "",
+    headers: [
       {
-        "name": "test",
-        "value": "entry4-response"
+        name: "test",
+        value: "entry4-response",
       },
     ],
-    "headersSize": 0,
-    "cookies": [],
-    "content": {
-      "size": 0,
-      "mimeType": "image/svg+xml",
-      "comment": "Response bodies are not included."
+    headersSize: 0,
+    cookies: [],
+    content: {
+      size: 0,
+      mimeType: "image/svg+xml",
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "bodySize": -1
+    redirectURL: "",
+    bodySize: -1,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "time": 0
-}
+  time: 0,
+};
 
 export const entry5serliPng: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:21.889+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://pwn-association.org/static/core/img/serli.jpg",
-    "httpVersion": "",
-    "headers": [
+  startedDateTime: "2023-03-09T18:07:21.889+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://pwn-association.org/static/core/img/serli.jpg",
+    httpVersion: "",
+    headers: [
       {
-        "name": "test",
-        "value": "entry5-request"
+        name: "test",
+        value: "entry5-request",
       },
       {
-        "name": "Host",
-        "value": "pwn-association.org"
+        name: "Host",
+        value: "pwn-association.org",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept",
-        "value": "image/avif,image/webp,*/*"
+        name: "Accept",
+        value: "image/avif,image/webp,*/*",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/devenir-membre/"
-      }
+        name: "Referer",
+        value: "https://pwn-association.org/devenir-membre/",
+      },
     ],
-    "cookies": [],
-    "queryString": [],
-    "headersSize": 0
+    cookies: [],
+    queryString: [],
+    headersSize: 0,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "",
-    "headers": [
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "",
+    headers: [
       {
-        "name": "test",
-        "value": "entry5-response"
+        name: "test",
+        value: "entry5-response",
       },
     ],
-    "headersSize": 0,
-    "cookies": [],
-    "content": {
-      "size": 0,
-      "mimeType": "image/jpeg",
-      "comment": "Response bodies are not included."
+    headersSize: 0,
+    cookies: [],
+    content: {
+      size: 0,
+      mimeType: "image/jpeg",
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "bodySize": -1
+    redirectURL: "",
+    bodySize: -1,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "time": 0
-}
+  time: 0,
+};
 
 export const entry6serli2Png: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:21.889+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://pwn-association.org/static/core/img/serli2.jpg",
-    "httpVersion": "",
-    "headers": [
+  startedDateTime: "2023-03-09T18:07:21.889+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://pwn-association.org/static/core/img/serli2.jpg",
+    httpVersion: "",
+    headers: [
       {
-        "name": "test",
-        "value": "entry6-request"
+        name: "test",
+        value: "entry6-request",
       },
       {
-        "name": "Host",
-        "value": "pwn-association.org"
+        name: "Host",
+        value: "pwn-association.org",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept",
-        "value": "image/avif,image/webp,*/*"
+        name: "Accept",
+        value: "image/avif,image/webp,*/*",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/devenir-membre/"
-      }
+        name: "Referer",
+        value: "https://pwn-association.org/devenir-membre/",
+      },
     ],
-    "cookies": [],
-    "queryString": [],
-    "headersSize": 0
+    cookies: [],
+    queryString: [],
+    headersSize: 0,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "",
-    "headers": [
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "",
+    headers: [
       {
-        "name": "test",
-        "value": "entry6-response"
+        name: "test",
+        value: "entry6-response",
       },
     ],
-    "headersSize": 0,
-    "cookies": [],
-    "content": {
-      "size": 0,
-      "mimeType": "image/jpeg",
-      "comment": "Response bodies are not included."
+    headersSize: 0,
+    cookies: [],
+    content: {
+      size: 0,
+      mimeType: "image/jpeg",
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "bodySize": -1
+    redirectURL: "",
+    bodySize: -1,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "time": 0
-}
+  time: 0,
+};
 
 export const entry7serliJpg: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:21.889+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://pwn-association.org/static/core/img/serli.jpg",
-    "httpVersion": "",
-    "headers": [
+  startedDateTime: "2023-03-09T18:07:21.889+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://pwn-association.org/static/core/img/serli.jpg",
+    httpVersion: "",
+    headers: [
       {
-        "name": "test",
-        "value": "entry7-request"
+        name: "test",
+        value: "entry7-request",
       },
       {
-        "name": "Host",
-        "value": "pwn-association.org"
+        name: "Host",
+        value: "pwn-association.org",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept",
-        "value": "image/avif,image/webp,*/*"
+        name: "Accept",
+        value: "image/avif,image/webp,*/*",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/devenir-membre/"
-      }
+        name: "Referer",
+        value: "https://pwn-association.org/devenir-membre/",
+      },
     ],
-    "cookies": [],
-    "queryString": [],
-    "headersSize": 0
+    cookies: [],
+    queryString: [],
+    headersSize: 0,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "",
-    "headers": [
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "",
+    headers: [
       {
-      "name": "test",
-      "value": "entry7-response"
-    },],
-    "headersSize": 0,
-    "cookies": [],
-    "content": {
-      "size": 0,
-      "mimeType": "image/jpeg",
-      "comment": "Response bodies are not included."
+        name: "test",
+        value: "entry7-response",
+      },
+    ],
+    headersSize: 0,
+    cookies: [],
+    content: {
+      size: 0,
+      mimeType: "image/jpeg",
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "bodySize": -1
+    redirectURL: "",
+    bodySize: -1,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "time": 0
-}
+  time: 0,
+};
 
 export const entry8upPng: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:21.889+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://pwn-association.org/static/core/img/univ-poitiers.png",
-    "httpVersion": "",
-    "headers": [
+  startedDateTime: "2023-03-09T18:07:21.889+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://pwn-association.org/static/core/img/univ-poitiers.png",
+    httpVersion: "",
+    headers: [
       {
-        "name": "test",
-        "value": "entry8-request"
+        name: "test",
+        value: "entry8-request",
       },
       {
-        "name": "Host",
-        "value": "pwn-association.org"
+        name: "Host",
+        value: "pwn-association.org",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept",
-        "value": "image/avif,image/webp,*/*"
+        name: "Accept",
+        value: "image/avif,image/webp,*/*",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/devenir-membre/"
-      }
+        name: "Referer",
+        value: "https://pwn-association.org/devenir-membre/",
+      },
     ],
-    "cookies": [],
-    "queryString": [],
-    "headersSize": 0
+    cookies: [],
+    queryString: [],
+    headersSize: 0,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "",
-    "headers": [
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "",
+    headers: [
       {
-        "name": "test",
-        "value": "entry8-response"
+        name: "test",
+        value: "entry8-response",
       },
     ],
-    "headersSize": 0,
-    "cookies": [],
-    "content": {
-      "size": 0,
-      "mimeType": "image/png",
-      "comment": "Response bodies are not included."
+    headersSize: 0,
+    cookies: [],
+    content: {
+      size: 0,
+      mimeType: "image/png",
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "bodySize": -1
+    redirectURL: "",
+    bodySize: -1,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "time": 0
-}
+  time: 0,
+};
 
 export const entry9upPng: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:21.889+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://pwn-association.org/static/core/img/univ-poitiers.png",
-    "httpVersion": "",
-    "headers": [
+  startedDateTime: "2023-03-09T18:07:21.889+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://pwn-association.org/static/core/img/univ-poitiers.png",
+    httpVersion: "",
+    headers: [
       {
-        "name": "test",
-        "value": "entry9-request"
+        name: "test",
+        value: "entry9-request",
       },
       {
-        "name": "Host",
-        "value": "pwn-association.org"
+        name: "Host",
+        value: "pwn-association.org",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept",
-        "value": "image/avif,image/webp,*/*"
+        name: "Accept",
+        value: "image/avif,image/webp,*/*",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/devenir-membre/"
-      }
+        name: "Referer",
+        value: "https://pwn-association.org/devenir-membre/",
+      },
     ],
-    "cookies": [],
-    "queryString": [],
-    "headersSize": 0
+    cookies: [],
+    queryString: [],
+    headersSize: 0,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "",
-    "headers": [      {
-      "name": "test",
-      "value": "entry9-response"
-    }],
-    "headersSize": 0,
-    "cookies": [],
-    "content": {
-      "size": 0,
-      "mimeType": "image/png",
-      "comment": "Response bodies are not included."
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "",
+    headers: [
+      {
+        name: "test",
+        value: "entry9-response",
+      },
+    ],
+    headersSize: 0,
+    cookies: [],
+    content: {
+      size: 0,
+      mimeType: "image/png",
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "bodySize": -1
+    redirectURL: "",
+    bodySize: -1,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "time": 0
-}
+  time: 0,
+};
 
 export const entry10analytics: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:21.905+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://www.google-analytics.com/analytics.js",
-    "httpVersion": "HTTP/2",
-    "headers": [      {
-      "name": "test",
-      "value": "entry10-request"
-    },
+  startedDateTime: "2023-03-09T18:07:21.905+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://www.google-analytics.com/analytics.js",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "Host",
-        "value": "www.google-analytics.com"
+        name: "test",
+        value: "entry10-request",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "Host",
+        value: "www.google-analytics.com",
       },
       {
-        "name": "Accept",
-        "value": "*/*"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept",
+        value: "*/*",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Alt-Used",
-        "value": "www.google-analytics.com"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Connection",
-        "value": "keep-alive"
+        name: "Alt-Used",
+        value: "www.google-analytics.com",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/"
+        name: "Connection",
+        value: "keep-alive",
       },
       {
-        "name": "Sec-Fetch-Dest",
-        "value": "script"
+        name: "Referer",
+        value: "https://pwn-association.org/",
       },
       {
-        "name": "Sec-Fetch-Mode",
-        "value": "no-cors"
+        name: "Sec-Fetch-Dest",
+        value: "script",
       },
       {
-        "name": "Sec-Fetch-Site",
-        "value": "cross-site"
-      }
+        name: "Sec-Fetch-Mode",
+        value: "no-cors",
+      },
+      {
+        name: "Sec-Fetch-Site",
+        value: "cross-site",
+      },
     ],
-    "cookies": [],
-    "queryString": [],
-    "headersSize": 0
+    cookies: [],
+    queryString: [],
+    headersSize: 0,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "HTTP/2",
-    "headers": [     {
-      "name": "test",
-      "value": "entry10-response"
-    },
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "strict-transport-security",
-        "value": "max-age=10886400; includeSubDomains; preload"
+        name: "test",
+        value: "entry10-response",
       },
       {
-        "name": "x-content-type-options",
-        "value": "nosniff"
+        name: "strict-transport-security",
+        value: "max-age=10886400; includeSubDomains; preload",
       },
       {
-        "name": "content-encoding",
-        "value": "gzip"
+        name: "x-content-type-options",
+        value: "nosniff",
       },
       {
-        "name": "cross-origin-resource-policy",
-        "value": "cross-origin"
+        name: "content-encoding",
+        value: "gzip",
       },
       {
-        "name": "server",
-        "value": "Golfe2"
+        name: "cross-origin-resource-policy",
+        value: "cross-origin",
       },
       {
-        "name": "content-length",
-        "value": "20085"
+        name: "server",
+        value: "Golfe2",
       },
       {
-        "name": "date",
-        "value": "Wed, 22 Feb 2023 13:26:57 GMT"
+        name: "content-length",
+        value: "20085",
       },
       {
-        "name": "expires",
-        "value": "Wed, 22 Feb 2023 15:26:57 GMT"
+        name: "date",
+        value: "Wed, 22 Feb 2023 13:26:57 GMT",
       },
       {
-        "name": "cache-control",
-        "value": "public, max-age=7200"
+        name: "expires",
+        value: "Wed, 22 Feb 2023 15:26:57 GMT",
       },
       {
-        "name": "age",
-        "value": "2509"
+        name: "cache-control",
+        value: "public, max-age=7200",
       },
       {
-        "name": "last-modified",
-        "value": "Tue, 10 Jan 2023 21:29:14 GMT"
+        name: "age",
+        value: "2509",
       },
       {
-        "name": "content-type",
-        "value": "text/javascript"
+        name: "last-modified",
+        value: "Tue, 10 Jan 2023 21:29:14 GMT",
       },
       {
-        "name": "vary",
-        "value": "Accept-Encoding"
+        name: "content-type",
+        value: "text/javascript",
       },
       {
-        "name": "alt-svc",
-        "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        name: "vary",
+        value: "Accept-Encoding",
       },
       {
-        "name": "X-Firefox-Spdy",
-        "value": "h2"
-      }
+        name: "alt-svc",
+        value: 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      },
+      {
+        name: "X-Firefox-Spdy",
+        value: "h2",
+      },
     ],
-    "cookies": [],
-    "content": {
-      "mimeType": "text/javascript",
-      "size": 0,
-      "comment": "Response bodies are not included."
+    cookies: [],
+    content: {
+      mimeType: "text/javascript",
+      size: 0,
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "headersSize": 0,
-    "bodySize": 210498
+    redirectURL: "",
+    headersSize: 0,
+    bodySize: 210498,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "time": 0,
-  "_securityState": "secure"
-}
-
+  time: 0,
+  _securityState: "secure",
+};
 
 export const entry11faviconPng: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:21.922+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://pwn-association.org/static/core/img/favicon.png",
-    "httpVersion": "HTTP/2",
-    "headers": [{
-      "name": "test",
-      "value": "entry11-request"
+  startedDateTime: "2023-03-09T18:07:21.922+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://pwn-association.org/static/core/img/favicon.png",
+    httpVersion: "HTTP/2",
+    headers: [
+      {
+        name: "test",
+        value: "entry11-request",
+      },
+      {
+        name: "Host",
+        value: "pwn-association.org",
+      },
+      {
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
+      },
+      {
+        name: "Accept",
+        value: "image/avif,image/webp,*/*",
+      },
+      {
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
+      },
+      {
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
+      },
+      {
+        name: "Connection",
+        value: "keep-alive",
+      },
+      {
+        name: "Referer",
+        value: "https://pwn-association.org/devenir-membre/",
+      },
+      {
+        name: "Cookie",
+        value:
+          "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580",
+      },
+      {
+        name: "Sec-Fetch-Dest",
+        value: "image",
+      },
+      {
+        name: "Sec-Fetch-Mode",
+        value: "no-cors",
+      },
+      {
+        name: "Sec-Fetch-Site",
+        value: "same-origin",
+      },
+    ],
+    cookies: [
+      {
+        name: "django_language",
+        value: "fr",
+      },
+      {
+        name: "_ga",
+        value: "GA1.2.1961057493.1677074927",
+      },
+      {
+        name: "_gid",
+        value: "GA1.2.208187854.1678381580",
+      },
+    ],
+    queryString: [],
+    headersSize: 0,
+  },
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "HTTP/2",
+    headers: [
+      {
+        name: "test",
+        value: "entry11-response",
+      },
+      {
+        name: "date",
+        value: "Wed, 22 Feb 2023 14:08:46 GMT",
+      },
+      {
+        name: "server",
+        value: "Apache",
+      },
+      {
+        name: "x-frame-options",
+        value: "SAMEORIGIN",
+      },
+      {
+        name: "x-xss-protection",
+        value: "1; mode=block",
+      },
+      {
+        name: "x-content-type-options",
+        value: "nosniff",
+      },
+      {
+        name: "last-modified",
+        value: "Thu, 25 May 2017 12:36:15 GMT",
+      },
+      {
+        name: "etag",
+        value: '"726-550587782e8a3"',
+      },
+      {
+        name: "accept-ranges",
+        value: "bytes",
+      },
+      {
+        name: "content-type",
+        value: "image/png",
+      },
+      {
+        name: "via",
+        value: "2.0 alproxy",
+      },
+      {
+        name: "content-length",
+        value: "1830",
+      },
+      {
+        name: "X-Firefox-Spdy",
+        value: "h2",
+      },
+    ],
+    cookies: [],
+    content: {
+      mimeType: "image/png",
+      size: 1830,
+      encoding: "base64",
+      comment: "Response bodies are not included.",
     },
-      {
-        "name": "Host",
-        "value": "pwn-association.org"
-      },
-      {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
-      },
-      {
-        "name": "Accept",
-        "value": "image/avif,image/webp,*/*"
-      },
-      {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
-      },
-      {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
-      },
-      {
-        "name": "Connection",
-        "value": "keep-alive"
-      },
-      {
-        "name": "Referer",
-        "value": "https://pwn-association.org/devenir-membre/"
-      },
-      {
-        "name": "Cookie",
-        "value": "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580"
-      },
-      {
-        "name": "Sec-Fetch-Dest",
-        "value": "image"
-      },
-      {
-        "name": "Sec-Fetch-Mode",
-        "value": "no-cors"
-      },
-      {
-        "name": "Sec-Fetch-Site",
-        "value": "same-origin"
-      }
-    ],
-    "cookies": [
-      {
-        "name": "django_language",
-        "value": "fr"
-      },
-      {
-        "name": "_ga",
-        "value": "GA1.2.1961057493.1677074927"
-      },
-      {
-        "name": "_gid",
-        "value": "GA1.2.208187854.1678381580"
-      }
-    ],
-    "queryString": [],
-    "headersSize": 0
+    redirectURL: "",
+    headersSize: 0,
+    bodySize: 1830,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "HTTP/2",
-    "headers": [
-      {
-        "name": "test",
-        "value": "entry11-response"
-      },
-      {
-        "name": "date",
-        "value": "Wed, 22 Feb 2023 14:08:46 GMT"
-      },
-      {
-        "name": "server",
-        "value": "Apache"
-      },
-      {
-        "name": "x-frame-options",
-        "value": "SAMEORIGIN"
-      },
-      {
-        "name": "x-xss-protection",
-        "value": "1; mode=block"
-      },
-      {
-        "name": "x-content-type-options",
-        "value": "nosniff"
-      },
-      {
-        "name": "last-modified",
-        "value": "Thu, 25 May 2017 12:36:15 GMT"
-      },
-      {
-        "name": "etag",
-        "value": "\"726-550587782e8a3\""
-      },
-      {
-        "name": "accept-ranges",
-        "value": "bytes"
-      },
-      {
-        "name": "content-type",
-        "value": "image/png"
-      },
-      {
-        "name": "via",
-        "value": "2.0 alproxy"
-      },
-      {
-        "name": "content-length",
-        "value": "1830"
-      },
-      {
-        "name": "X-Firefox-Spdy",
-        "value": "h2"
-      }
-    ],
-    "cookies": [],
-    "content": {
-      "mimeType": "image/png",
-      "size": 1830,
-      "encoding": "base64",
-      "comment": "Response bodies are not included."
-    },
-    "redirectURL": "",
-    "headersSize": 0,
-    "bodySize": 1830
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
-  },
-  "time": 0,
-  "_securityState": "secure"
-}
+  time: 0,
+  _securityState: "secure",
+};
 
 export const entry12analytics: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:21.926+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "POST",
-    "url": "https://www.google-analytics.com/j/collect?v=1&_v=j99&a=924812924&t=pageview&_s=1&dl=https%3A%2F%2Fpwn-association.org%2Fdevenir-membre%2F&ul=en-us&de=UTF-8&dt=Devenir%20membre%20-%20pwn%20%2F%2F%20poitiers%20web%20nerdz%20%2F%2F&sd=30-bit&sr=2560x1440&vp=1123x1259&je=0&_u=AACAAEABAAAAACAAI~&jid=1098785639&gjid=1281333324&cid=1961057493.1677074927&tid=UA-84874571-1&_gid=208187854.1678381580&_r=1&_slc=1&z=503220534",
-    "httpVersion": "HTTP/3",
-    "headers": [
+  startedDateTime: "2023-03-09T18:07:21.926+01:00",
+  request: {
+    bodySize: 0,
+    method: "POST",
+    url: "https://www.google-analytics.com/j/collect?v=1&_v=j99&a=924812924&t=pageview&_s=1&dl=https%3A%2F%2Fpwn-association.org%2Fdevenir-membre%2F&ul=en-us&de=UTF-8&dt=Devenir%20membre%20-%20pwn%20%2F%2F%20poitiers%20web%20nerdz%20%2F%2F&sd=30-bit&sr=2560x1440&vp=1123x1259&je=0&_u=AACAAEABAAAAACAAI~&jid=1098785639&gjid=1281333324&cid=1961057493.1677074927&tid=UA-84874571-1&_gid=208187854.1678381580&_r=1&_slc=1&z=503220534",
+    httpVersion: "HTTP/3",
+    headers: [
       {
-        "name": "test",
-        "value": "entry12-request"
+        name: "test",
+        value: "entry12-request",
       },
       {
-        "name": "Host",
-        "value": "www.google-analytics.com"
+        name: "Host",
+        value: "www.google-analytics.com",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept",
-        "value": "*/*"
+        name: "Accept",
+        value: "*/*",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Content-Type",
-        "value": "text/plain"
+        name: "Content-Type",
+        value: "text/plain",
       },
       {
-        "name": "Content-Length",
-        "value": "0"
+        name: "Content-Length",
+        value: "0",
       },
       {
-        "name": "Origin",
-        "value": "https://pwn-association.org"
+        name: "Origin",
+        value: "https://pwn-association.org",
       },
       {
-        "name": "Alt-Used",
-        "value": "www.google-analytics.com"
+        name: "Alt-Used",
+        value: "www.google-analytics.com",
       },
       {
-        "name": "Connection",
-        "value": "keep-alive"
+        name: "Connection",
+        value: "keep-alive",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/"
+        name: "Referer",
+        value: "https://pwn-association.org/",
       },
       {
-        "name": "Sec-Fetch-Dest",
-        "value": "empty"
+        name: "Sec-Fetch-Dest",
+        value: "empty",
       },
       {
-        "name": "Sec-Fetch-Mode",
-        "value": "cors"
+        name: "Sec-Fetch-Mode",
+        value: "cors",
       },
       {
-        "name": "Sec-Fetch-Site",
-        "value": "cross-site"
+        name: "Sec-Fetch-Site",
+        value: "cross-site",
       },
       {
-        "name": "TE",
-        "value": "trailers"
-      }
+        name: "TE",
+        value: "trailers",
+      },
     ],
-    "cookies": [],
-    "queryString": [
+    cookies: [],
+    queryString: [
       {
-        "name": "v",
-        "value": "1"
+        name: "v",
+        value: "1",
       },
       {
-        "name": "_v",
-        "value": "j99"
+        name: "_v",
+        value: "j99",
       },
       {
-        "name": "a",
-        "value": "924812924"
+        name: "a",
+        value: "924812924",
       },
       {
-        "name": "t",
-        "value": "pageview"
+        name: "t",
+        value: "pageview",
       },
       {
-        "name": "_s",
-        "value": "1"
+        name: "_s",
+        value: "1",
       },
       {
-        "name": "dl",
-        "value": "https://pwn-association.org/devenir-membre/"
+        name: "dl",
+        value: "https://pwn-association.org/devenir-membre/",
       },
       {
-        "name": "ul",
-        "value": "en-us"
+        name: "ul",
+        value: "en-us",
       },
       {
-        "name": "de",
-        "value": "UTF-8"
+        name: "de",
+        value: "UTF-8",
       },
       {
-        "name": "dt",
-        "value": "Devenir membre - pwn // poitiers web nerdz //"
+        name: "dt",
+        value: "Devenir membre - pwn // poitiers web nerdz //",
       },
       {
-        "name": "sd",
-        "value": "30-bit"
+        name: "sd",
+        value: "30-bit",
       },
       {
-        "name": "sr",
-        "value": "2560x1440"
+        name: "sr",
+        value: "2560x1440",
       },
       {
-        "name": "vp",
-        "value": "1123x1259"
+        name: "vp",
+        value: "1123x1259",
       },
       {
-        "name": "je",
-        "value": "0"
+        name: "je",
+        value: "0",
       },
       {
-        "name": "_u",
-        "value": "AACAAEABAAAAACAAI~"
+        name: "_u",
+        value: "AACAAEABAAAAACAAI~",
       },
       {
-        "name": "jid",
-        "value": "1098785639"
+        name: "jid",
+        value: "1098785639",
       },
       {
-        "name": "gjid",
-        "value": "1281333324"
+        name: "gjid",
+        value: "1281333324",
       },
       {
-        "name": "cid",
-        "value": "1961057493.1677074927"
+        name: "cid",
+        value: "1961057493.1677074927",
       },
       {
-        "name": "tid",
-        "value": "UA-84874571-1"
+        name: "tid",
+        value: "UA-84874571-1",
       },
       {
-        "name": "_gid",
-        "value": "208187854.1678381580"
+        name: "_gid",
+        value: "208187854.1678381580",
       },
       {
-        "name": "_r",
-        "value": "1"
+        name: "_r",
+        value: "1",
       },
       {
-        "name": "_slc",
-        "value": "1"
+        name: "_slc",
+        value: "1",
       },
       {
-        "name": "z",
-        "value": "503220534"
-      }
+        name: "z",
+        value: "503220534",
+      },
     ],
-    "headersSize": 869
+    headersSize: 869,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "HTTP/3",
-    "headers": [     {
-      "name": "test",
-      "value": "entry12-response"
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "HTTP/3",
+    headers: [
+      {
+        name: "test",
+        value: "entry12-response",
+      },
+      {
+        name: "access-control-allow-origin",
+        value: "https://pwn-association.org",
+      },
+      {
+        name: "date",
+        value: "Thu, 09 Mar 2023 17:07:21 GMT",
+      },
+      {
+        name: "pragma",
+        value: "no-cache",
+      },
+      {
+        name: "expires",
+        value: "Fri, 01 Jan 1990 00:00:00 GMT",
+      },
+      {
+        name: "cache-control",
+        value: "no-cache, no-store, must-revalidate",
+      },
+      {
+        name: "last-modified",
+        value: "Sun, 17 May 1998 03:00:00 GMT",
+      },
+      {
+        name: "access-control-allow-credentials",
+        value: "true",
+      },
+      {
+        name: "x-content-type-options",
+        value: "nosniff",
+      },
+      {
+        name: "content-type",
+        value: "text/plain",
+      },
+      {
+        name: "cross-origin-resource-policy",
+        value: "cross-origin",
+      },
+      {
+        name: "server",
+        value: "Golfe2",
+      },
+      {
+        name: "content-length",
+        value: "3",
+      },
+      {
+        name: "alt-svc",
+        value: 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      },
+    ],
+    cookies: [],
+    content: {
+      mimeType: "text/plain",
+      size: 3,
+      comment: "Response bodies are not included.",
     },
-      {
-        "name": "access-control-allow-origin",
-        "value": "https://pwn-association.org"
-      },
-      {
-        "name": "date",
-        "value": "Thu, 09 Mar 2023 17:07:21 GMT"
-      },
-      {
-        "name": "pragma",
-        "value": "no-cache"
-      },
-      {
-        "name": "expires",
-        "value": "Fri, 01 Jan 1990 00:00:00 GMT"
-      },
-      {
-        "name": "cache-control",
-        "value": "no-cache, no-store, must-revalidate"
-      },
-      {
-        "name": "last-modified",
-        "value": "Sun, 17 May 1998 03:00:00 GMT"
-      },
-      {
-        "name": "access-control-allow-credentials",
-        "value": "true"
-      },
-      {
-        "name": "x-content-type-options",
-        "value": "nosniff"
-      },
-      {
-        "name": "content-type",
-        "value": "text/plain"
-      },
-      {
-        "name": "cross-origin-resource-policy",
-        "value": "cross-origin"
-      },
-      {
-        "name": "server",
-        "value": "Golfe2"
-      },
-      {
-        "name": "content-length",
-        "value": "3"
-      },
-      {
-        "name": "alt-svc",
-        "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
-      }
-    ],
-    "cookies": [],
-    "content": {
-      "mimeType": "text/plain",
-      "size": 3,
-      "comment": "Response bodies are not included."
-    },
-    "redirectURL": "",
-    "headersSize": 503,
-    "bodySize": 506
+    redirectURL: "",
+    headersSize: 503,
+    bodySize: 506,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 2,
-    "dns": 0,
-    "connect": 0,
-    "ssl": 0,
-    "send": 0,
-    "wait": 22,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 2,
+    dns: 0,
+    connect: 0,
+    ssl: 0,
+    send: 0,
+    wait: 22,
+    receive: 0,
   },
-  "time": 24,
-  "_securityState": "secure",
-  "serverIPAddress": "2a00:1450:4007:80e::200e",
-  "connection": "443"
-}
+  time: 24,
+  _securityState: "secure",
+  serverIPAddress: "2a00:1450:4007:80e::200e",
+  connection: "443",
+};
 
 export const entry13pagePresentation: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:22.941+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://pwn-association.org/presentation/",
-    "httpVersion": "HTTP/2",
-    "headers": [
+  startedDateTime: "2023-03-09T18:07:22.941+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://pwn-association.org/presentation/",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "test",
-        "value": "entry13-request"
+        name: "test",
+        value: "entry13-request",
       },
       {
-        "name": "Host",
-        "value": "pwn-association.org"
+        name: "Host",
+        value: "pwn-association.org",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept",
-        "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+        name: "Accept",
+        value:
+          "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Connection",
-        "value": "keep-alive"
+        name: "Connection",
+        value: "keep-alive",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/devenir-membre/"
+        name: "Referer",
+        value: "https://pwn-association.org/devenir-membre/",
       },
       {
-        "name": "Cookie",
-        "value": "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580; _gat=1"
+        name: "Cookie",
+        value:
+          "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580; _gat=1",
       },
       {
-        "name": "Upgrade-Insecure-Requests",
-        "value": "1"
+        name: "Upgrade-Insecure-Requests",
+        value: "1",
       },
       {
-        "name": "Sec-Fetch-Dest",
-        "value": "document"
+        name: "Sec-Fetch-Dest",
+        value: "document",
       },
       {
-        "name": "Sec-Fetch-Mode",
-        "value": "navigate"
+        name: "Sec-Fetch-Mode",
+        value: "navigate",
       },
       {
-        "name": "Sec-Fetch-Site",
-        "value": "same-origin"
+        name: "Sec-Fetch-Site",
+        value: "same-origin",
       },
       {
-        "name": "Sec-Fetch-User",
-        "value": "?1"
+        name: "Sec-Fetch-User",
+        value: "?1",
       },
       {
-        "name": "TE",
-        "value": "trailers"
-      }
+        name: "TE",
+        value: "trailers",
+      },
     ],
-    "cookies": [
+    cookies: [
       {
-        "name": "django_language",
-        "value": "fr"
+        name: "django_language",
+        value: "fr",
       },
       {
-        "name": "_ga",
-        "value": "GA1.2.1961057493.1677074927"
+        name: "_ga",
+        value: "GA1.2.1961057493.1677074927",
       },
       {
-        "name": "_gid",
-        "value": "GA1.2.208187854.1678381580"
+        name: "_gid",
+        value: "GA1.2.208187854.1678381580",
       },
       {
-        "name": "_gat",
-        "value": "1"
-      }
+        name: "_gat",
+        value: "1",
+      },
     ],
-    "queryString": [],
-    "headersSize": 631
+    queryString: [],
+    headersSize: 631,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "HTTP/2",
-    "headers": [
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "test",
-        "value": "entry13-response"
+        name: "test",
+        value: "entry13-response",
       },
       {
-        "name": "date",
-        "value": "Thu, 09 Mar 2023 17:07:22 GMT"
+        name: "date",
+        value: "Thu, 09 Mar 2023 17:07:22 GMT",
       },
       {
-        "name": "server",
-        "value": "Apache"
+        name: "server",
+        value: "Apache",
       },
       {
-        "name": "content-language",
-        "value": "fr"
+        name: "content-language",
+        value: "fr",
       },
       {
-        "name": "expires",
-        "value": "Thu, 09 Mar 2023 17:08:23 GMT"
+        name: "expires",
+        value: "Thu, 09 Mar 2023 17:08:23 GMT",
       },
       {
-        "name": "vary",
-        "value": "Accept-Language,Cookie,Accept-Encoding"
+        name: "vary",
+        value: "Accept-Language,Cookie,Accept-Encoding",
       },
       {
-        "name": "cache-control",
-        "value": "max-age=60"
+        name: "cache-control",
+        value: "max-age=60",
       },
       {
-        "name": "x-frame-options",
-        "value": "SAMEORIGIN"
+        name: "x-frame-options",
+        value: "SAMEORIGIN",
       },
       {
-        "name": "x-xss-protection",
-        "value": "1; mode=block"
+        name: "x-xss-protection",
+        value: "1; mode=block",
       },
       {
-        "name": "x-content-type-options",
-        "value": "nosniff"
+        name: "x-content-type-options",
+        value: "nosniff",
       },
       {
-        "name": "last-modified",
-        "value": "Thu, 09 Mar 2023 17:07:23 GMT"
+        name: "last-modified",
+        value: "Thu, 09 Mar 2023 17:07:23 GMT",
       },
       {
-        "name": "content-encoding",
-        "value": "br"
+        name: "content-encoding",
+        value: "br",
       },
       {
-        "name": "content-type",
-        "value": "text/html; charset=utf-8"
+        name: "content-type",
+        value: "text/html; charset=utf-8",
       },
       {
-        "name": "via",
-        "value": "2.0 alproxy"
+        name: "via",
+        value: "2.0 alproxy",
       },
       {
-        "name": "X-Firefox-Spdy",
-        "value": "h2"
-      }
+        name: "X-Firefox-Spdy",
+        value: "h2",
+      },
     ],
-    "cookies": [],
-    "content": {
-      "mimeType": "text/html; charset=utf-8",
-      "size": 6947,
-      "comment": "Response bodies are not included."
+    cookies: [],
+    content: {
+      mimeType: "text/html; charset=utf-8",
+      size: 6947,
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "headersSize": 446,
-    "bodySize": 2689
+    redirectURL: "",
+    headersSize: 446,
+    bodySize: 2689,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "connect": 0,
-    "ssl": 0,
-    "send": 0,
-    "wait": 72,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    connect: 0,
+    ssl: 0,
+    send: 0,
+    wait: 72,
+    receive: 0,
   },
-  "time": 72,
-  "_securityState": "secure",
-  "serverIPAddress": "2a00:b6e0:1:20:11::1",
-  "connection": "443"
-}
-
+  time: 72,
+  _securityState: "secure",
+  serverIPAddress: "2a00:b6e0:1:20:11::1",
+  connection: "443",
+};
 
 export const entry14bundlePresentation: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:23.057+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://pwn-association.org/static/core/js/app.js",
-    "httpVersion": "HTTP/2",
-    "headers": [
+  startedDateTime: "2023-03-09T18:07:23.057+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://pwn-association.org/static/core/js/app.js",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "test",
-        "value": "entry14-request"
+        name: "test",
+        value: "entry14-request",
       },
       {
-        "name": "Host",
-        "value": "pwn-association.org"
+        name: "Host",
+        value: "pwn-association.org",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept",
-        "value": "*/*"
+        name: "Accept",
+        value: "*/*",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Connection",
-        "value": "keep-alive"
+        name: "Connection",
+        value: "keep-alive",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/presentation/"
+        name: "Referer",
+        value: "https://pwn-association.org/presentation/",
       },
       {
-        "name": "Cookie",
-        "value": "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580; _gat=1"
+        name: "Cookie",
+        value:
+          "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580; _gat=1",
       },
       {
-        "name": "Sec-Fetch-Dest",
-        "value": "script"
+        name: "Sec-Fetch-Dest",
+        value: "script",
       },
       {
-        "name": "Sec-Fetch-Mode",
-        "value": "no-cors"
+        name: "Sec-Fetch-Mode",
+        value: "no-cors",
       },
       {
-        "name": "Sec-Fetch-Site",
-        "value": "same-origin"
-      }
+        name: "Sec-Fetch-Site",
+        value: "same-origin",
+      },
     ],
-    "cookies": [
+    cookies: [
       {
-        "name": "django_language",
-        "value": "fr"
+        name: "django_language",
+        value: "fr",
       },
       {
-        "name": "_ga",
-        "value": "GA1.2.1961057493.1677074927"
+        name: "_ga",
+        value: "GA1.2.1961057493.1677074927",
       },
       {
-        "name": "_gid",
-        "value": "GA1.2.208187854.1678381580"
+        name: "_gid",
+        value: "GA1.2.208187854.1678381580",
       },
       {
-        "name": "_gat",
-        "value": "1"
-      }
+        name: "_gat",
+        value: "1",
+      },
     ],
-    "queryString": [],
-    "headersSize": 0
+    queryString: [],
+    headersSize: 0,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "HTTP/2",
-    "headers": [   {
-      "name": "test",
-      "value": "entry14-response"
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "HTTP/2",
+    headers: [
+      {
+        name: "test",
+        value: "entry14-response",
+      },
+      {
+        name: "date",
+        value: "Thu, 09 Mar 2023 17:06:20 GMT",
+      },
+      {
+        name: "server",
+        value: "Apache",
+      },
+      {
+        name: "x-frame-options",
+        value: "SAMEORIGIN",
+      },
+      {
+        name: "x-xss-protection",
+        value: "1; mode=block",
+      },
+      {
+        name: "x-content-type-options",
+        value: "nosniff",
+      },
+      {
+        name: "last-modified",
+        value: "Thu, 25 May 2017 12:36:15 GMT",
+      },
+      {
+        name: "etag",
+        value: '"18a23-55058778336c3-br"',
+      },
+      {
+        name: "accept-ranges",
+        value: "bytes",
+      },
+      {
+        name: "vary",
+        value: "Accept-Encoding",
+      },
+      {
+        name: "content-encoding",
+        value: "br",
+      },
+      {
+        name: "content-type",
+        value: "application/javascript",
+      },
+      {
+        name: "via",
+        value: "2.0 alproxy",
+      },
+      {
+        name: "content-length",
+        value: "33942",
+      },
+      {
+        name: "X-Firefox-Spdy",
+        value: "h2",
+      },
+    ],
+    cookies: [],
+    content: {
+      mimeType: "application/javascript",
+      size: 100899,
+      comment: "Response bodies are not included.",
     },
-      {
-        "name": "date",
-        "value": "Thu, 09 Mar 2023 17:06:20 GMT"
-      },
-      {
-        "name": "server",
-        "value": "Apache"
-      },
-      {
-        "name": "x-frame-options",
-        "value": "SAMEORIGIN"
-      },
-      {
-        "name": "x-xss-protection",
-        "value": "1; mode=block"
-      },
-      {
-        "name": "x-content-type-options",
-        "value": "nosniff"
-      },
-      {
-        "name": "last-modified",
-        "value": "Thu, 25 May 2017 12:36:15 GMT"
-      },
-      {
-        "name": "etag",
-        "value": "\"18a23-55058778336c3-br\""
-      },
-      {
-        "name": "accept-ranges",
-        "value": "bytes"
-      },
-      {
-        "name": "vary",
-        "value": "Accept-Encoding"
-      },
-      {
-        "name": "content-encoding",
-        "value": "br"
-      },
-      {
-        "name": "content-type",
-        "value": "application/javascript"
-      },
-      {
-        "name": "via",
-        "value": "2.0 alproxy"
-      },
-      {
-        "name": "content-length",
-        "value": "33942"
-      },
-      {
-        "name": "X-Firefox-Spdy",
-        "value": "h2"
-      }
-    ],
-    "cookies": [],
-    "content": {
-      "mimeType": "application/javascript",
-      "size": 100899,
-      "comment": "Response bodies are not included."
-    },
-    "redirectURL": "",
-    "headersSize": 0,
-    "bodySize": 33942
+    redirectURL: "",
+    headersSize: 0,
+    bodySize: 33942,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "time": 0,
-  "_securityState": "secure"
-}
+  time: 0,
+  _securityState: "secure",
+};
 
 export const entry15presentationAnalytics: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:23.074+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://www.google-analytics.com/analytics.js",
-    "httpVersion": "HTTP/2",
-    "headers": [   {
-      "name": "test",
-      "value": "entry15-request"
-    },
+  startedDateTime: "2023-03-09T18:07:23.074+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://www.google-analytics.com/analytics.js",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "Host",
-        "value": "www.google-analytics.com"
+        name: "test",
+        value: "entry15-request",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "Host",
+        value: "www.google-analytics.com",
       },
       {
-        "name": "Accept",
-        "value": "*/*"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept",
+        value: "*/*",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Alt-Used",
-        "value": "www.google-analytics.com"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Connection",
-        "value": "keep-alive"
+        name: "Alt-Used",
+        value: "www.google-analytics.com",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/"
+        name: "Connection",
+        value: "keep-alive",
       },
       {
-        "name": "Sec-Fetch-Dest",
-        "value": "script"
+        name: "Referer",
+        value: "https://pwn-association.org/",
       },
       {
-        "name": "Sec-Fetch-Mode",
-        "value": "no-cors"
+        name: "Sec-Fetch-Dest",
+        value: "script",
       },
       {
-        "name": "Sec-Fetch-Site",
-        "value": "cross-site"
-      }
+        name: "Sec-Fetch-Mode",
+        value: "no-cors",
+      },
+      {
+        name: "Sec-Fetch-Site",
+        value: "cross-site",
+      },
     ],
-    "cookies": [],
-    "queryString": [],
-    "headersSize": 0
+    cookies: [],
+    queryString: [],
+    headersSize: 0,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "HTTP/2",
-    "headers": [  {
-      "name": "test",
-      "value": "entry15-response"
-    },
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "strict-transport-security",
-        "value": "max-age=10886400; includeSubDomains; preload"
+        name: "test",
+        value: "entry15-response",
       },
       {
-        "name": "x-content-type-options",
-        "value": "nosniff"
+        name: "strict-transport-security",
+        value: "max-age=10886400; includeSubDomains; preload",
       },
       {
-        "name": "content-encoding",
-        "value": "gzip"
+        name: "x-content-type-options",
+        value: "nosniff",
       },
       {
-        "name": "cross-origin-resource-policy",
-        "value": "cross-origin"
+        name: "content-encoding",
+        value: "gzip",
       },
       {
-        "name": "server",
-        "value": "Golfe2"
+        name: "cross-origin-resource-policy",
+        value: "cross-origin",
       },
       {
-        "name": "content-length",
-        "value": "20085"
+        name: "server",
+        value: "Golfe2",
       },
       {
-        "name": "date",
-        "value": "Wed, 22 Feb 2023 13:26:57 GMT"
+        name: "content-length",
+        value: "20085",
       },
       {
-        "name": "expires",
-        "value": "Wed, 22 Feb 2023 15:26:57 GMT"
+        name: "date",
+        value: "Wed, 22 Feb 2023 13:26:57 GMT",
       },
       {
-        "name": "cache-control",
-        "value": "public, max-age=7200"
+        name: "expires",
+        value: "Wed, 22 Feb 2023 15:26:57 GMT",
       },
       {
-        "name": "age",
-        "value": "2509"
+        name: "cache-control",
+        value: "public, max-age=7200",
       },
       {
-        "name": "last-modified",
-        "value": "Tue, 10 Jan 2023 21:29:14 GMT"
+        name: "age",
+        value: "2509",
       },
       {
-        "name": "content-type",
-        "value": "text/javascript"
+        name: "last-modified",
+        value: "Tue, 10 Jan 2023 21:29:14 GMT",
       },
       {
-        "name": "vary",
-        "value": "Accept-Encoding"
+        name: "content-type",
+        value: "text/javascript",
       },
       {
-        "name": "alt-svc",
-        "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        name: "vary",
+        value: "Accept-Encoding",
       },
       {
-        "name": "X-Firefox-Spdy",
-        "value": "h2"
-      }
+        name: "alt-svc",
+        value: 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      },
+      {
+        name: "X-Firefox-Spdy",
+        value: "h2",
+      },
     ],
-    "cookies": [],
-    "content": {
-      "mimeType": "text/javascript",
-      "size": 0,
-      "comment": "Response bodies are not included."
+    cookies: [],
+    content: {
+      mimeType: "text/javascript",
+      size: 0,
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "headersSize": 0,
-    "bodySize": 210498
+    redirectURL: "",
+    headersSize: 0,
+    bodySize: 210498,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "time": 0,
-  "_securityState": "secure"
-}
+  time: 0,
+  _securityState: "secure",
+};
 
 export const entry16presentationFavicon: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:23.076+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://pwn-association.org/static/core/img/favicon.png",
-    "httpVersion": "HTTP/2",
-    "headers": [  {
-      "name": "test",
-      "value": "entry16-request"
-    },
+  startedDateTime: "2023-03-09T18:07:23.076+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://pwn-association.org/static/core/img/favicon.png",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "Host",
-        "value": "pwn-association.org"
+        name: "test",
+        value: "entry16-request",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "Host",
+        value: "pwn-association.org",
       },
       {
-        "name": "Accept",
-        "value": "image/avif,image/webp,*/*"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept",
+        value: "image/avif,image/webp,*/*",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Connection",
-        "value": "keep-alive"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/presentation/"
+        name: "Connection",
+        value: "keep-alive",
       },
       {
-        "name": "Cookie",
-        "value": "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580; _gat=1"
+        name: "Referer",
+        value: "https://pwn-association.org/presentation/",
       },
       {
-        "name": "Sec-Fetch-Dest",
-        "value": "image"
+        name: "Cookie",
+        value:
+          "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580; _gat=1",
       },
       {
-        "name": "Sec-Fetch-Mode",
-        "value": "no-cors"
+        name: "Sec-Fetch-Dest",
+        value: "image",
       },
       {
-        "name": "Sec-Fetch-Site",
-        "value": "same-origin"
-      }
+        name: "Sec-Fetch-Mode",
+        value: "no-cors",
+      },
+      {
+        name: "Sec-Fetch-Site",
+        value: "same-origin",
+      },
     ],
-    "cookies": [
+    cookies: [
       {
-        "name": "django_language",
-        "value": "fr"
+        name: "django_language",
+        value: "fr",
       },
       {
-        "name": "_ga",
-        "value": "GA1.2.1961057493.1677074927"
+        name: "_ga",
+        value: "GA1.2.1961057493.1677074927",
       },
       {
-        "name": "_gid",
-        "value": "GA1.2.208187854.1678381580"
+        name: "_gid",
+        value: "GA1.2.208187854.1678381580",
       },
       {
-        "name": "_gat",
-        "value": "1"
-      }
+        name: "_gat",
+        value: "1",
+      },
     ],
-    "queryString": [],
-    "headersSize": 0
+    queryString: [],
+    headersSize: 0,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "HTTP/2",
-    "headers": [{
-      "name": "test",
-      "value": "entry16-response"
-    },
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "date",
-        "value": "Wed, 22 Feb 2023 14:08:46 GMT"
+        name: "test",
+        value: "entry16-response",
       },
       {
-        "name": "server",
-        "value": "Apache"
+        name: "date",
+        value: "Wed, 22 Feb 2023 14:08:46 GMT",
       },
       {
-        "name": "x-frame-options",
-        "value": "SAMEORIGIN"
+        name: "server",
+        value: "Apache",
       },
       {
-        "name": "x-xss-protection",
-        "value": "1; mode=block"
+        name: "x-frame-options",
+        value: "SAMEORIGIN",
       },
       {
-        "name": "x-content-type-options",
-        "value": "nosniff"
+        name: "x-xss-protection",
+        value: "1; mode=block",
       },
       {
-        "name": "last-modified",
-        "value": "Thu, 25 May 2017 12:36:15 GMT"
+        name: "x-content-type-options",
+        value: "nosniff",
       },
       {
-        "name": "etag",
-        "value": "\"726-550587782e8a3\""
+        name: "last-modified",
+        value: "Thu, 25 May 2017 12:36:15 GMT",
       },
       {
-        "name": "accept-ranges",
-        "value": "bytes"
+        name: "etag",
+        value: '"726-550587782e8a3"',
       },
       {
-        "name": "content-type",
-        "value": "image/png"
+        name: "accept-ranges",
+        value: "bytes",
       },
       {
-        "name": "via",
-        "value": "2.0 alproxy"
+        name: "content-type",
+        value: "image/png",
       },
       {
-        "name": "content-length",
-        "value": "1830"
+        name: "via",
+        value: "2.0 alproxy",
       },
       {
-        "name": "X-Firefox-Spdy",
-        "value": "h2"
-      }
+        name: "content-length",
+        value: "1830",
+      },
+      {
+        name: "X-Firefox-Spdy",
+        value: "h2",
+      },
     ],
-    "cookies": [],
-    "content": {
-      "mimeType": "image/png",
-      "size": 1830,
-      "encoding": "base64",
-      "comment": "Response bodies are not included."
+    cookies: [],
+    content: {
+      mimeType: "image/png",
+      size: 1830,
+      encoding: "base64",
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "headersSize": 0,
-    "bodySize": 1830
+    redirectURL: "",
+    headersSize: 0,
+    bodySize: 1830,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "time": 0,
-  "_securityState": "secure"
-}
+  time: 0,
+  _securityState: "secure",
+};
 
 export const entry17presentationAnalytics2: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:23.085+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "POST",
-    "url": "https://www.google-analytics.com/j/collect?v=1&_v=j99&a=326088020&t=pageview&_s=1&dl=https%3A%2F%2Fpwn-association.org%2Fpresentation%2F&ul=en-us&de=UTF-8&dt=Pr%C3%A9sentation%20-%20pwn%20%2F%2F%20poitiers%20web%20nerdz%20%2F%2F&sd=30-bit&sr=2560x1440&vp=1123x1259&je=0&_u=AACAAEABAAAAACAAI~&jid=&gjid=&cid=1961057493.1677074927&tid=UA-84874571-1&_gid=208187854.1678381580&_slc=1&z=2132833392",
-    "httpVersion": "HTTP/3",
-    "headers": [{
-      "name": "test",
-      "value": "entry17-request"
-    },
+  startedDateTime: "2023-03-09T18:07:23.085+01:00",
+  request: {
+    bodySize: 0,
+    method: "POST",
+    url: "https://www.google-analytics.com/j/collect?v=1&_v=j99&a=326088020&t=pageview&_s=1&dl=https%3A%2F%2Fpwn-association.org%2Fpresentation%2F&ul=en-us&de=UTF-8&dt=Pr%C3%A9sentation%20-%20pwn%20%2F%2F%20poitiers%20web%20nerdz%20%2F%2F&sd=30-bit&sr=2560x1440&vp=1123x1259&je=0&_u=AACAAEABAAAAACAAI~&jid=&gjid=&cid=1961057493.1677074927&tid=UA-84874571-1&_gid=208187854.1678381580&_slc=1&z=2132833392",
+    httpVersion: "HTTP/3",
+    headers: [
       {
-        "name": "Host",
-        "value": "www.google-analytics.com"
+        name: "test",
+        value: "entry17-request",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "Host",
+        value: "www.google-analytics.com",
       },
       {
-        "name": "Accept",
-        "value": "*/*"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept",
+        value: "*/*",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Content-Type",
-        "value": "text/plain"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Content-Length",
-        "value": "0"
+        name: "Content-Type",
+        value: "text/plain",
       },
       {
-        "name": "Origin",
-        "value": "https://pwn-association.org"
+        name: "Content-Length",
+        value: "0",
       },
       {
-        "name": "Alt-Used",
-        "value": "www.google-analytics.com"
+        name: "Origin",
+        value: "https://pwn-association.org",
       },
       {
-        "name": "Connection",
-        "value": "keep-alive"
+        name: "Alt-Used",
+        value: "www.google-analytics.com",
       },
       {
-        "name": "Referer",
-        "value": "https://pwn-association.org/"
+        name: "Connection",
+        value: "keep-alive",
       },
       {
-        "name": "Sec-Fetch-Dest",
-        "value": "empty"
+        name: "Referer",
+        value: "https://pwn-association.org/",
       },
       {
-        "name": "Sec-Fetch-Mode",
-        "value": "cors"
+        name: "Sec-Fetch-Dest",
+        value: "empty",
       },
       {
-        "name": "Sec-Fetch-Site",
-        "value": "cross-site"
+        name: "Sec-Fetch-Mode",
+        value: "cors",
       },
       {
-        "name": "TE",
-        "value": "trailers"
-      }
+        name: "Sec-Fetch-Site",
+        value: "cross-site",
+      },
+      {
+        name: "TE",
+        value: "trailers",
+      },
     ],
-    "cookies": [],
-    "queryString": [
+    cookies: [],
+    queryString: [
       {
-        "name": "v",
-        "value": "1"
+        name: "v",
+        value: "1",
       },
       {
-        "name": "_v",
-        "value": "j99"
+        name: "_v",
+        value: "j99",
       },
       {
-        "name": "a",
-        "value": "326088020"
+        name: "a",
+        value: "326088020",
       },
       {
-        "name": "t",
-        "value": "pageview"
+        name: "t",
+        value: "pageview",
       },
       {
-        "name": "_s",
-        "value": "1"
+        name: "_s",
+        value: "1",
       },
       {
-        "name": "dl",
-        "value": "https://pwn-association.org/presentation/"
+        name: "dl",
+        value: "https://pwn-association.org/presentation/",
       },
       {
-        "name": "ul",
-        "value": "en-us"
+        name: "ul",
+        value: "en-us",
       },
       {
-        "name": "de",
-        "value": "UTF-8"
+        name: "de",
+        value: "UTF-8",
       },
       {
-        "name": "dt",
-        "value": "Présentation - pwn // poitiers web nerdz //"
+        name: "dt",
+        value: "Présentation - pwn // poitiers web nerdz //",
       },
       {
-        "name": "sd",
-        "value": "30-bit"
+        name: "sd",
+        value: "30-bit",
       },
       {
-        "name": "sr",
-        "value": "2560x1440"
+        name: "sr",
+        value: "2560x1440",
       },
       {
-        "name": "vp",
-        "value": "1123x1259"
+        name: "vp",
+        value: "1123x1259",
       },
       {
-        "name": "je",
-        "value": "0"
+        name: "je",
+        value: "0",
       },
       {
-        "name": "_u",
-        "value": "AACAAEABAAAAACAAI~"
+        name: "_u",
+        value: "AACAAEABAAAAACAAI~",
       },
       {
-        "name": "jid",
-        "value": ""
+        name: "jid",
+        value: "",
       },
       {
-        "name": "gjid",
-        "value": ""
+        name: "gjid",
+        value: "",
       },
       {
-        "name": "cid",
-        "value": "1961057493.1677074927"
+        name: "cid",
+        value: "1961057493.1677074927",
       },
       {
-        "name": "tid",
-        "value": "UA-84874571-1"
+        name: "tid",
+        value: "UA-84874571-1",
       },
       {
-        "name": "_gid",
-        "value": "208187854.1678381580"
+        name: "_gid",
+        value: "208187854.1678381580",
       },
       {
-        "name": "_slc",
-        "value": "1"
+        name: "_slc",
+        value: "1",
       },
       {
-        "name": "z",
-        "value": "2132833392"
-      }
+        name: "z",
+        value: "2132833392",
+      },
     ],
-    "headersSize": 844
+    headersSize: 844,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "HTTP/3",
-    "headers": [{
-      "name": "test",
-      "value": "entry17-response"
-    },
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "HTTP/3",
+    headers: [
       {
-        "name": "access-control-allow-origin",
-        "value": "https://pwn-association.org"
+        name: "test",
+        value: "entry17-response",
       },
       {
-        "name": "date",
-        "value": "Thu, 09 Mar 2023 17:07:23 GMT"
+        name: "access-control-allow-origin",
+        value: "https://pwn-association.org",
       },
       {
-        "name": "pragma",
-        "value": "no-cache"
+        name: "date",
+        value: "Thu, 09 Mar 2023 17:07:23 GMT",
       },
       {
-        "name": "expires",
-        "value": "Fri, 01 Jan 1990 00:00:00 GMT"
+        name: "pragma",
+        value: "no-cache",
       },
       {
-        "name": "cache-control",
-        "value": "no-cache, no-store, must-revalidate"
+        name: "expires",
+        value: "Fri, 01 Jan 1990 00:00:00 GMT",
       },
       {
-        "name": "last-modified",
-        "value": "Sun, 17 May 1998 03:00:00 GMT"
+        name: "cache-control",
+        value: "no-cache, no-store, must-revalidate",
       },
       {
-        "name": "access-control-allow-credentials",
-        "value": "true"
+        name: "last-modified",
+        value: "Sun, 17 May 1998 03:00:00 GMT",
       },
       {
-        "name": "x-content-type-options",
-        "value": "nosniff"
+        name: "access-control-allow-credentials",
+        value: "true",
       },
       {
-        "name": "content-type",
-        "value": "text/plain"
+        name: "x-content-type-options",
+        value: "nosniff",
       },
       {
-        "name": "cross-origin-resource-policy",
-        "value": "cross-origin"
+        name: "content-type",
+        value: "text/plain",
       },
       {
-        "name": "server",
-        "value": "Golfe2"
+        name: "cross-origin-resource-policy",
+        value: "cross-origin",
       },
       {
-        "name": "content-length",
-        "value": "3"
+        name: "server",
+        value: "Golfe2",
       },
       {
-        "name": "alt-svc",
-        "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
-      }
+        name: "content-length",
+        value: "3",
+      },
+      {
+        name: "alt-svc",
+        value: 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      },
     ],
-    "cookies": [],
-    "content": {
-      "mimeType": "text/plain",
-      "size": 3,
-      "comment": "Response bodies are not included."
+    cookies: [],
+    content: {
+      mimeType: "text/plain",
+      size: 3,
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "headersSize": 503,
-    "bodySize": 506
+    redirectURL: "",
+    headersSize: 503,
+    bodySize: 506,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "connect": 0,
-    "ssl": 0,
-    "send": 0,
-    "wait": 22,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    connect: 0,
+    ssl: 0,
+    send: 0,
+    wait: 22,
+    receive: 0,
   },
-  "time": 22,
-  "_securityState": "secure",
-  "serverIPAddress": "2a00:1450:4007:80e::200e",
-  "connection": "443"
-}
+  time: 22,
+  _securityState: "secure",
+  serverIPAddress: "2a00:1450:4007:80e::200e",
+  connection: "443",
+};
 
 export const entry18pageFaq: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:23.790+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://other-site-example.net/faq/",
-    "httpVersion": "HTTP/2",
-    "headers": [{
-      "name": "test",
-      "value": "entry18-request"
-    },
+  startedDateTime: "2023-03-09T18:07:23.790+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://other-site-example.net/faq/",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "Host",
-        "value": "other-site-example.net"
+        name: "test",
+        value: "entry18-request",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "Host",
+        value: "other-site-example.net",
       },
       {
-        "name": "Accept",
-        "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept",
+        value:
+          "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Connection",
-        "value": "keep-alive"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Referer",
-        "value": "https://other-site-example.net/presentation/"
+        name: "Connection",
+        value: "keep-alive",
       },
       {
-        "name": "Cookie",
-        "value": "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580; _gat=1"
+        name: "Referer",
+        value: "https://other-site-example.net/presentation/",
       },
       {
-        "name": "Upgrade-Insecure-Requests",
-        "value": "1"
+        name: "Cookie",
+        value:
+          "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580; _gat=1",
       },
       {
-        "name": "Sec-Fetch-Dest",
-        "value": "document"
+        name: "Upgrade-Insecure-Requests",
+        value: "1",
       },
       {
-        "name": "Sec-Fetch-Mode",
-        "value": "navigate"
+        name: "Sec-Fetch-Dest",
+        value: "document",
       },
       {
-        "name": "Sec-Fetch-Site",
-        "value": "same-origin"
+        name: "Sec-Fetch-Mode",
+        value: "navigate",
       },
       {
-        "name": "Sec-Fetch-User",
-        "value": "?1"
+        name: "Sec-Fetch-Site",
+        value: "same-origin",
       },
       {
-        "name": "TE",
-        "value": "trailers"
-      }
+        name: "Sec-Fetch-User",
+        value: "?1",
+      },
+      {
+        name: "TE",
+        value: "trailers",
+      },
     ],
-    "cookies": [
+    cookies: [
       {
-        "name": "django_language",
-        "value": "fr"
+        name: "django_language",
+        value: "fr",
       },
       {
-        "name": "_ga",
-        "value": "GA1.2.1961057493.1677074927"
+        name: "_ga",
+        value: "GA1.2.1961057493.1677074927",
       },
       {
-        "name": "_gid",
-        "value": "GA1.2.208187854.1678381580"
+        name: "_gid",
+        value: "GA1.2.208187854.1678381580",
       },
       {
-        "name": "_gat",
-        "value": "1"
-      }
+        name: "_gat",
+        value: "1",
+      },
     ],
-    "queryString": [],
-    "headersSize": 620
+    queryString: [],
+    headersSize: 620,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "HTTP/2",
-    "headers": [{
-      "name": "test",
-      "value": "entry18-response"
-    },
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "date",
-        "value": "Thu, 09 Mar 2023 17:07:23 GMT"
+        name: "test",
+        value: "entry18-response",
       },
       {
-        "name": "server",
-        "value": "Apache"
+        name: "date",
+        value: "Thu, 09 Mar 2023 17:07:23 GMT",
       },
       {
-        "name": "content-language",
-        "value": "fr"
+        name: "server",
+        value: "Apache",
       },
       {
-        "name": "expires",
-        "value": "Thu, 09 Mar 2023 17:08:23 GMT"
+        name: "content-language",
+        value: "fr",
       },
       {
-        "name": "vary",
-        "value": "Accept-Language,Cookie,Accept-Encoding"
+        name: "expires",
+        value: "Thu, 09 Mar 2023 17:08:23 GMT",
       },
       {
-        "name": "cache-control",
-        "value": "max-age=60"
+        name: "vary",
+        value: "Accept-Language,Cookie,Accept-Encoding",
       },
       {
-        "name": "x-frame-options",
-        "value": "SAMEORIGIN"
+        name: "cache-control",
+        value: "max-age=60",
       },
       {
-        "name": "x-xss-protection",
-        "value": "1; mode=block"
+        name: "x-frame-options",
+        value: "SAMEORIGIN",
       },
       {
-        "name": "x-content-type-options",
-        "value": "nosniff"
+        name: "x-xss-protection",
+        value: "1; mode=block",
       },
       {
-        "name": "last-modified",
-        "value": "Thu, 09 Mar 2023 17:07:23 GMT"
+        name: "x-content-type-options",
+        value: "nosniff",
       },
       {
-        "name": "content-encoding",
-        "value": "br"
+        name: "last-modified",
+        value: "Thu, 09 Mar 2023 17:07:23 GMT",
       },
       {
-        "name": "content-type",
-        "value": "text/html; charset=utf-8"
+        name: "content-encoding",
+        value: "br",
       },
       {
-        "name": "via",
-        "value": "2.0 alproxy"
+        name: "content-type",
+        value: "text/html; charset=utf-8",
       },
       {
-        "name": "X-Firefox-Spdy",
-        "value": "h2"
-      }
+        name: "via",
+        value: "2.0 alproxy",
+      },
+      {
+        name: "X-Firefox-Spdy",
+        value: "h2",
+      },
     ],
-    "cookies": [],
-    "content": {
-      "mimeType": "text/html; charset=utf-8",
-      "size": 8568,
-      "comment": "Response bodies are not included."
+    cookies: [],
+    content: {
+      mimeType: "text/html; charset=utf-8",
+      size: 8568,
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "headersSize": 446,
-    "bodySize": 3459
+    redirectURL: "",
+    headersSize: 446,
+    bodySize: 3459,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "connect": 0,
-    "ssl": 0,
-    "send": 0,
-    "wait": 78,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    connect: 0,
+    ssl: 0,
+    send: 0,
+    wait: 78,
+    receive: 0,
   },
-  "time": 78,
-  "_securityState": "secure",
-  "serverIPAddress": "2a00:b6e0:1:20:11::1",
-  "connection": "443"
-}
+  time: 78,
+  _securityState: "secure",
+  serverIPAddress: "2a00:b6e0:1:20:11::1",
+  connection: "443",
+};
 
 export const entry19faqBundle: SimpleEntry = {
-  "startedDateTime": "2023-03-09T18:07:23.903+01:00",
-  "request": {
-    "bodySize": 0,
-    "method": "GET",
-    "url": "https://other-site-example.net/static/core/js/app.js",
-    "httpVersion": "HTTP/2",
-    "headers": [{
-      "name": "test",
-      "value": "entry19-request"
-    },
+  startedDateTime: "2023-03-09T18:07:23.903+01:00",
+  request: {
+    bodySize: 0,
+    method: "GET",
+    url: "https://other-site-example.net/static/core/js/app.js",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "Host",
-        "value": "other-site-example.net"
+        name: "test",
+        value: "entry19-request",
       },
       {
-        "name": "User-Agent",
-        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0"
+        name: "Host",
+        value: "other-site-example.net",
       },
       {
-        "name": "Accept",
-        "value": "*/*"
+        name: "User-Agent",
+        value:
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0",
       },
       {
-        "name": "Accept-Language",
-        "value": "en-US,en;q=0.5"
+        name: "Accept",
+        value: "*/*",
       },
       {
-        "name": "Accept-Encoding",
-        "value": "gzip, deflate, br"
+        name: "Accept-Language",
+        value: "en-US,en;q=0.5",
       },
       {
-        "name": "Connection",
-        "value": "keep-alive"
+        name: "Accept-Encoding",
+        value: "gzip, deflate, br",
       },
       {
-        "name": "Referer",
-        "value": "https://other-site-example.net/faq/"
+        name: "Connection",
+        value: "keep-alive",
       },
       {
-        "name": "Cookie",
-        "value": "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580; _gat=1"
+        name: "Referer",
+        value: "https://other-site-example.net/faq/",
       },
       {
-        "name": "Sec-Fetch-Dest",
-        "value": "script"
+        name: "Cookie",
+        value:
+          "django_language=fr; _ga=GA1.2.1961057493.1677074927; _gid=GA1.2.208187854.1678381580; _gat=1",
       },
       {
-        "name": "Sec-Fetch-Mode",
-        "value": "no-cors"
+        name: "Sec-Fetch-Dest",
+        value: "script",
       },
       {
-        "name": "Sec-Fetch-Site",
-        "value": "same-origin"
-      }
+        name: "Sec-Fetch-Mode",
+        value: "no-cors",
+      },
+      {
+        name: "Sec-Fetch-Site",
+        value: "same-origin",
+      },
     ],
-    "cookies": [
+    cookies: [
       {
-        "name": "django_language",
-        "value": "fr"
+        name: "django_language",
+        value: "fr",
       },
       {
-        "name": "_ga",
-        "value": "GA1.2.1961057493.1677074927"
+        name: "_ga",
+        value: "GA1.2.1961057493.1677074927",
       },
       {
-        "name": "_gid",
-        "value": "GA1.2.208187854.1678381580"
+        name: "_gid",
+        value: "GA1.2.208187854.1678381580",
       },
       {
-        "name": "_gat",
-        "value": "1"
-      }
+        name: "_gat",
+        value: "1",
+      },
     ],
-    "queryString": [],
-    "headersSize": 0
+    queryString: [],
+    headersSize: 0,
   },
-  "response": {
-    "status": 200,
-    "statusText": "OK",
-    "httpVersion": "HTTP/2",
-    "headers": [{
-      "name": "test",
-      "value": "entry19-response"
-    },
+  response: {
+    status: 200,
+    statusText: "OK",
+    httpVersion: "HTTP/2",
+    headers: [
       {
-        "name": "date",
-        "value": "Thu, 09 Mar 2023 17:06:20 GMT"
+        name: "test",
+        value: "entry19-response",
       },
       {
-        "name": "server",
-        "value": "Apache"
+        name: "date",
+        value: "Thu, 09 Mar 2023 17:06:20 GMT",
       },
       {
-        "name": "x-frame-options",
-        "value": "SAMEORIGIN"
+        name: "server",
+        value: "Apache",
       },
       {
-        "name": "x-xss-protection",
-        "value": "1; mode=block"
+        name: "x-frame-options",
+        value: "SAMEORIGIN",
       },
       {
-        "name": "x-content-type-options",
-        "value": "nosniff"
+        name: "x-xss-protection",
+        value: "1; mode=block",
       },
       {
-        "name": "last-modified",
-        "value": "Thu, 25 May 2017 12:36:15 GMT"
+        name: "x-content-type-options",
+        value: "nosniff",
       },
       {
-        "name": "etag",
-        "value": "\"18a23-55058778336c3-br\""
+        name: "last-modified",
+        value: "Thu, 25 May 2017 12:36:15 GMT",
       },
       {
-        "name": "accept-ranges",
-        "value": "bytes"
+        name: "etag",
+        value: '"18a23-55058778336c3-br"',
       },
       {
-        "name": "vary",
-        "value": "Accept-Encoding"
+        name: "accept-ranges",
+        value: "bytes",
       },
       {
-        "name": "content-encoding",
-        "value": "br"
+        name: "vary",
+        value: "Accept-Encoding",
       },
       {
-        "name": "content-type",
-        "value": "application/javascript"
+        name: "content-encoding",
+        value: "br",
       },
       {
-        "name": "via",
-        "value": "2.0 alproxy"
+        name: "content-type",
+        value: "application/javascript",
       },
       {
-        "name": "content-length",
-        "value": "33942"
+        name: "via",
+        value: "2.0 alproxy",
       },
       {
-        "name": "X-Firefox-Spdy",
-        "value": "h2"
-      }
+        name: "content-length",
+        value: "33942",
+      },
+      {
+        name: "X-Firefox-Spdy",
+        value: "h2",
+      },
     ],
-    "cookies": [],
-    "content": {
-      "mimeType": "application/javascript",
-      "size": 100899,
-      "comment": "Response bodies are not included."
+    cookies: [],
+    content: {
+      mimeType: "application/javascript",
+      size: 100899,
+      comment: "Response bodies are not included.",
     },
-    "redirectURL": "",
-    "headersSize": 0,
-    "bodySize": 33942
+    redirectURL: "",
+    headersSize: 0,
+    bodySize: 33942,
   },
-  "cache": {},
-  "timings": {
-    "blocked": 0,
-    "dns": 0,
-    "ssl": 0,
-    "connect": 0,
-    "send": 0,
-    "wait": 0,
-    "receive": 0
+  cache: {},
+  timings: {
+    blocked: 0,
+    dns: 0,
+    ssl: 0,
+    connect: 0,
+    send: 0,
+    wait: 0,
+    receive: 0,
   },
-  "time": 0,
-  "_securityState": "secure"
-}
+  time: 0,
+  _securityState: "secure",
+};

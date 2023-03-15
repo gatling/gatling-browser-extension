@@ -6,10 +6,10 @@ export interface GroupedEntry {
   sendTime: number;
   arrivalTime: number;
   root: SimpleEntry;
-  resources: SimpleEntry[]
+  resources: SimpleEntry[];
 }
 
 export interface Simulation {
   baseUrl: string;
-  groupedRequests: GroupedEntry[]
+  groupedRequests: GroupedEntry[];
 }

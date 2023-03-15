@@ -1,4 +1,3 @@
-
 // Format("Java 8", "java8", "java", ";", "()")
 // Format("Java 11", "java11", "java", ";", "()")
 // Format("Java 17", "java17", "java", ";", "()")
@@ -14,32 +13,31 @@
 // }
 
 export interface CoreConfiguration {
-  encoding: string,
-  simulationsFolder: string,
-  resourcesFolder: string,
-  pkg: string,
-  className: string,
-  thresholdForPauseCreation: number, // Duration on Scala
-  saveConfig: boolean,
-  headless: boolean,
-  harFilePath?: string,
-  format: "java8" | "java11" | "java17" | "kotlin" | "scala"
+  encoding: string;
+  simulationsFolder: string;
+  resourcesFolder: string;
+  pkg: string;
+  className: string;
+  thresholdForPauseCreation: number; // Duration on Scala
+  saveConfig: boolean;
+  headless: boolean;
+  harFilePath?: string;
+  format: "java8" | "java11" | "java17" | "kotlin" | "scala";
 }
 
 export interface FiltersConfiguration {
-  enabled: Boolean,
-  allowList: string[],
-  denyList: string[]
+  enabled: boolean;
+  allowList: string[];
+  denyList: string[];
 }
 
-
 export interface HttpConfiguration {
-  automaticReferer: boolean,
-  followRedirect: boolean,
-  inferHtmlResources: boolean,
-  removeCacheHeaders: boolean,
-  checkResponseBodies: boolean,
-  useSimulationAsPrefix: boolean,
+  automaticReferer: boolean;
+  followRedirect: boolean;
+  inferHtmlResources: boolean;
+  removeCacheHeaders: boolean;
+  checkResponseBodies: boolean;
+  useSimulationAsPrefix: boolean;
   useMethodAndUriAsPostfix: boolean;
 }
 

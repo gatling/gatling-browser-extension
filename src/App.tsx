@@ -13,25 +13,19 @@ const App = (): ReactElement => {
   const [records, setRecords] = useState<HarItem[]>([]);
 
   const handleClick = useCallback(() => {
-    console.log("handleClick recording:", recording);
-    console.log("handleClick records:", records);
     if (recording) {
       const newHar = stopRecording();
-      console.log("newHar:", newHar);
       setRecords((oldRecords) => [...oldRecords, newHar]);
     } else {
       startRecording();
     }
 
     setRecording((prevState) => !prevState);
-  }, [recording, records]);
+  }, [recording]);
 
   const handleClickDelete = useCallback((id: string) => {
     setRecords((prevState) => prevState.filter((item) => item.id !== id));
   }, []);
-
-  console.log("recording:", recording);
-  console.log("records:", records);
 
   return (
     <div className={styles.container}>

@@ -1,5 +1,5 @@
-import { type RecorderConfiguration } from "@src/interfaces/RecorderConfiguration";
 import { type Entry } from "@src/interfaces/Entry";
+import { type RecorderConfiguration } from "@src/interfaces/RecorderConfiguration";
 import { sortRequestsByDate } from "@src/utils/date";
 import { groupRequests } from "@src/utils/generate/group";
 import { interResources } from "@src/utils/generate/inferHtmlResources";
@@ -49,7 +49,7 @@ const generate = (
   // For each requests block, the head is the root request and the tail is the resources.
   // The baseUrl is the most frequent scheme + domain of all the root requests.
   // Store this baseUrl and turn all the requests that start with it into relative ones.
-  const simulation = addUrls(filteredGroupedEntries)
+  const simulation = addUrls(filteredGroupedEntries);
 
   // Step #6: determine common urls
   // For each remaining requests, extract scheme + domain strings.
