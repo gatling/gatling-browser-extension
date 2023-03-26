@@ -1,8 +1,14 @@
 import cloneDeep from "lodash-es/cloneDeep";
 
-import { type GroupedEntry, type Simulation } from "@src/interfaces/Entry";
+import {
+  type GroupedEntry,
+  type RebasedGroupedEntry,
+  type Simulation,
+} from "@src/interfaces/Entry";
 
-export const getBaseUrlCounts = (groupedRequests: GroupedEntry[]): Map<string, number> =>
+export const getBaseUrlCounts = (
+  groupedRequests: GroupedEntry[]
+): Map<string, number> =>
   groupedRequests.reduce(
     (acc: Map<string, number>, groupedRequest: GroupedEntry) => {
       const baseUrl = new URL(groupedRequest.root.request.url).origin;
@@ -28,39 +34,97 @@ export const getKeyWithHighestValue = (map: Map<string, number>): string => {
   return highestKey;
 };
 
-export const rebaseUrlIfNeeded = (url: string, baseUrl: string): string => {
+export const rebaseUrlIfNeeded = (
+  url: string,
+  baseUrl: string,
+  commonsUrl: Map<string, string>
+): { url: string; origin?: string } => {
   if (url.startsWith(baseUrl)) {
-    return url.slice(baseUrl.length);
+    return { url: url.slice(baseUrl.length) };
   } else {
-    return url;
+    const origin = Array.from(commonsUrl.keys()).find((commonUrl) =>
+      url.startsWith(commonUrl)
+    );
+    if (origin && url.startsWith(origin)) {
+      return { url: url.slice(origin.length), origin };
+    } else {
+      return { url };
+    }
   }
 };
 
-const rebaseGroupedRequest = (
+const rebaseGroupedEntry = (
   groupedEntry: GroupedEntry,
-  baseUrl: string
-): GroupedEntry => {
-  const clonedGroupedEntry = cloneDeep(groupedEntry);
-  clonedGroupedEntry.root.request.url = rebaseUrlIfNeeded(
+  baseUrl: string,
+  commonUrls: Map<string, string>
+): RebasedGroupedEntry => {
+  const clonedGroupedEntry = cloneDeep(groupedEntry) as RebasedGroupedEntry;
+  const { url, origin } = rebaseUrlIfNeeded(
     clonedGroupedEntry.root.request.url,
-    baseUrl
+    baseUrl,
+    commonUrls
   );
+
+  clonedGroupedEntry.root.request.url = url;
+  clonedGroupedEntry.root.request.origin = origin;
+
   clonedGroupedEntry.resources.map((r) => {
-    r.request.url = rebaseUrlIfNeeded(r.request.url, baseUrl);
+    const { url, origin } = rebaseUrlIfNeeded(
+      r.request.url,
+      baseUrl,
+      commonUrls
+    );
+
+    r.request.url = url;
+    r.request.origin = origin;
+
     return r;
   });
 
   return clonedGroupedEntry;
 };
 
-export const addUrls = (groupedRequests: GroupedEntry[]): Simulation => {
-  const baseUrlCounts = getBaseUrlCounts(groupedRequests);
+export const getCommonUrls = (
+  groupedEntries: GroupedEntry[],
+  baseUrl: string,
+  baseUrlCounts: Map<string, number>
+): Map<string, string> => {
+  const baseUrlCountsWithoutBaseUrl = new Map(baseUrlCounts);
+  const commonUrlsSet = new Set(baseUrlCountsWithoutBaseUrl.keys());
+
+  groupedEntries.forEach((groupedEntry) => {
+    groupedEntry.resources.forEach((entry) => {
+      commonUrlsSet.add(new URL(entry.request.url).origin);
+    });
+  });
+
+  commonUrlsSet.delete(baseUrl);
+
+  const commonUrls = new Map<string, string>();
+  Array.from(commonUrlsSet).forEach((url, index, array) => {
+    commonUrls.set(
+      url,
+      "url" +
+        (index + 1).toString().padStart(array.length.toString().length, "0")
+    );
+  });
+
+  return commonUrls;
+};
+
+export const addUrls = (groupedEntries: GroupedEntry[]): Simulation => {
+  const baseUrlCounts = getBaseUrlCounts(groupedEntries);
   const baseUrl = getKeyWithHighestValue(baseUrlCounts);
-  const rebasedGroupedRequests = groupedRequests.map((r) =>
-    rebaseGroupedRequest(r, baseUrl)
+
+  const commonUrls = getCommonUrls(groupedEntries, baseUrl, baseUrlCounts);
+
+  const rebasedGroupedEntries = groupedEntries.map((groupedEntry) =>
+    rebaseGroupedEntry(groupedEntry, baseUrl, commonUrls)
   );
+
   return {
     baseUrl,
-    groupedRequests: rebasedGroupedRequests,
+    commonUrls,
+    groupedEntries: rebasedGroupedEntries,
   };
 };

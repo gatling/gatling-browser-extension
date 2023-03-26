@@ -49,12 +49,10 @@ const generate = (
   // For each requests block, the head is the root request and the tail is the resources.
   // The baseUrl is the most frequent scheme + domain of all the root requests.
   // Store this baseUrl and turn all the requests that start with it into relative ones.
-  const simulation = addUrls(filteredGroupedEntries);
-
   // Step #6: determine common urls
   // For each remaining requests, extract scheme + domain strings.
   // The urls of these requests will have to be rendered as a String concatenation with a reference to the corresponding url.
-  // TODO
+  const simulation = addUrls(filteredGroupedEntries);
 
   // Step #7: Filter out automatic headers
   // Gatling computes automatically some headers, so they must be removed:

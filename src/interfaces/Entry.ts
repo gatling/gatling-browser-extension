@@ -2,14 +2,23 @@ export type Entry = chrome.devtools.network.Request;
 
 export type SimpleEntry = Omit<Entry, "getContent">;
 
-export interface GroupedEntry {
+export type RebasedEntry = SimpleEntry & {
+  request: Entry & { origin?: string };
+};
+
+export interface GroupedItem<T> {
   sendTime: number;
   arrivalTime: number;
-  root: SimpleEntry;
-  resources: SimpleEntry[];
+  root: T;
+  resources: T[];
 }
+
+export type GroupedEntry = GroupedItem<SimpleEntry>;
+
+export type RebasedGroupedEntry = GroupedItem<RebasedEntry>;
 
 export interface Simulation {
   baseUrl: string;
-  groupedRequests: GroupedEntry[];
+  commonUrls: Map<string, string>;
+  groupedEntries: RebasedGroupedEntry[];
 }
