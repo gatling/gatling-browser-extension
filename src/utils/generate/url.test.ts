@@ -99,7 +99,7 @@ const REBASED_GROUPED_ENTRIES = (
   return entries;
 });
 
-const SIMULATION: Simulation = {
+export const EXPECTED_SIMULATION: Simulation = {
   baseUrl: "https://pwn-association.org",
   commonUrls: new Map([
     ["https://other-site-example.net", "url1"],
@@ -110,6 +110,6 @@ const SIMULATION: Simulation = {
 
 describe("addUrls", () => {
   it("should return a simulation object", () => {
-    expect(addUrls(GROUPED_ENTRIES)).toEqual(SIMULATION);
+    expect(addUrls(GROUPED_ENTRIES)).toEqual(EXPECTED_SIMULATION);
   });
 });

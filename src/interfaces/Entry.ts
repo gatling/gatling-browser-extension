@@ -22,3 +22,8 @@ export interface Simulation {
   commonUrls: Map<string, string>;
   groupedEntries: RebasedGroupedEntry[];
 }
+
+export interface Header {
+  name: string;
+  value: string;
+}

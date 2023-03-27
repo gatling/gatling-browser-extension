@@ -1,6 +1,7 @@
 import { type Entry } from "@src/interfaces/Entry";
 import { type RecorderConfiguration } from "@src/interfaces/RecorderConfiguration";
 import { sortRequestsByDate } from "@src/utils/date";
+import { filterHeaders } from "@src/utils/generate/filterHeaders";
 import { groupRequests } from "@src/utils/generate/group";
 import { interResources } from "@src/utils/generate/inferHtmlResources";
 import { mergeRedirectionRequests } from "@src/utils/generate/redirection";
@@ -65,6 +66,11 @@ const generate = (
   //   - all HTTP/2 pseudo headers: names start with :
   // Beware that header names are case-insensitive.                                                                                                                                              return "";
   // TODO
+  const simulationWithFilteredHeaders = filterHeaders(
+    simulation,
+    configuration.http.automaticReferer,
+    configuration.http.removeCacheHeaders
+  );
 
   // Step #8: handle Basic Auth
   // Collect all the authorization (case-insensitive) header values from all the requests that start with Basic.
