@@ -1,6 +1,7 @@
 import { type Entry } from "@src/interfaces/Entry";
 import { type RecorderConfiguration } from "@src/interfaces/RecorderConfiguration";
 import { sortRequestsByDate } from "@src/utils/date";
+import { handleBasicAuth } from "@src/utils/generate/basicAuth";
 import { filterHeaders } from "@src/utils/generate/filterHeaders";
 import { groupRequests } from "@src/utils/generate/group";
 import { interResources } from "@src/utils/generate/inferHtmlResources";
@@ -65,7 +66,6 @@ const generate = (
   //   - cache-control , if-match, if-modified-since, if-none-match, if-unmodified-since, if-unmodified-since (only if removeCacheHeaders option is enable, which is the default)
   //   - all HTTP/2 pseudo headers: names start with :
   // Beware that header names are case-insensitive.                                                                                                                                              return "";
-  // TODO
   const simulationWithFilteredHeaders = filterHeaders(
     simulation,
     configuration.http.automaticReferer,
@@ -75,7 +75,9 @@ const generate = (
   // Step #8: handle Basic Auth
   // Collect all the authorization (case-insensitive) header values from all the requests that start with Basic.
   // If there’s only one value, remove these headers from the requests and parse and store the credentials.
-  // TODO
+  const authenticatedSimulation = handleBasicAuth(
+    simulationWithFilteredHeaders
+  );
 
   // Step #9: handle request bodies
   // In the presence of request bodies, the content-type header should be present.
