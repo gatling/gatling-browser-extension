@@ -8,7 +8,12 @@ export interface Credentials {
 }
 
 export type RebasedEntry = SimpleEntry & {
-  request: Entry & { origin?: string };
+  request: {
+    origin?: string;
+    rawFileBodyId?: number;
+    elFileBodyId?: number;
+    stringBodyId?: number;
+  };
 };
 
 export interface GroupedItem<T> {
@@ -30,6 +35,12 @@ export interface Simulation {
 
 export interface AuthenticatedSimulation extends Simulation {
   basicAuth?: Credentials;
+}
+
+export interface SimulationWithBodies extends AuthenticatedSimulation {
+  elFileBodies: Map<number, string>;
+  rawFileBodies: Map<number, string>;
+  stringBodies: Map<number, string>;
 }
 
 export interface Header {

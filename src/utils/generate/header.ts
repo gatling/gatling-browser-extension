@@ -1,4 +1,4 @@
-import { Header } from "@src/interfaces/Entry";
+import { type Header } from "@src/interfaces/Entry";
 
 export const isCookie = (header: Header): boolean =>
   "cookie" === header.name.toLowerCase();
@@ -28,3 +28,21 @@ export const isCacheHeader = (header: Header): boolean =>
 
 export const isHttpPseudoHeader = (header: Header): boolean =>
   header.name.startsWith(":");
+
+export const isContentType = (header: Header): boolean =>
+  "content-type" === header.name.toLowerCase();
+
+export const isContentTypeFormUrlEncoded = (header: Header): boolean =>
+  isContentType(header) &&
+  "application/x-www-form-urlencoded" === header.value.toLowerCase();
+
+const TEXT_BASED_CONTENT_TYPE = [
+  "application/json",
+  "application/xhtml+xml",
+  "application/xml",
+];
+
+export const isContentTypeTextBase = (header: Header): boolean =>
+  isContentType(header) &&
+  (TEXT_BASED_CONTENT_TYPE.includes(header.value.toLowerCase()) ||
+    header.value.toLowerCase().startsWith("text/"));

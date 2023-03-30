@@ -10,8 +10,9 @@ import {
   isConnectionTrue,
   isContentLength,
   isCookie,
-  isHost, isHttpPseudoHeader,
-  isReferer
+  isHost,
+  isHttpPseudoHeader,
+  isReferer,
 } from "@src/utils/generate/header";
 
 export const removeHeadersFromRequest = (

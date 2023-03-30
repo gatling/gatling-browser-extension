@@ -6,6 +6,7 @@ import { filterHeaders } from "@src/utils/generate/filterHeaders";
 import { groupRequests } from "@src/utils/generate/group";
 import { interResources } from "@src/utils/generate/inferHtmlResources";
 import { mergeRedirectionRequests } from "@src/utils/generate/redirection";
+import { handleRequestBodies } from "@src/utils/generate/requestBody";
 import { addUrls } from "@src/utils/generate/url";
 
 const generate = (
@@ -88,7 +89,7 @@ const generate = (
   //     - if the text length is 100 or less, generate a StringBody
   //     - otherwise, dump the content into a file and generate a ElFileBody
   //   - otherwise dump the content into a file and generate a RawFileBody
-  //  TODO
+  const simulationWithFiles = handleRequestBodies(authenticatedSimulation);
 
   // Step #10: determine default request headers
   // Determine the header names that are available on all the requests.
