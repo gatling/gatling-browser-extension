@@ -43,6 +43,11 @@ export interface SimulationWithBodies extends AuthenticatedSimulation {
   stringBodies: Map<number, string>;
 }
 
+export interface SimulationWithDefaultRequestHeaders
+  extends SimulationWithBodies {
+  defaultRequestHeaders: Map<string, string>;
+}
+
 export interface Header {
   name: string;
   value: string;

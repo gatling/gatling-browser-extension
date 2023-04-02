@@ -5,6 +5,7 @@ import {
   type RebasedGroupedEntry,
   type Simulation,
 } from "@src/interfaces/Entry";
+import { getKeyWithHighestValue } from "@src/utils/typescript";
 
 export const getBaseUrlCounts = (
   groupedRequests: GroupedEntry[]
@@ -19,20 +20,6 @@ export const getBaseUrlCounts = (
     },
     new Map()
   );
-
-export const getKeyWithHighestValue = (map: Map<string, number>): string => {
-  let highestKey = "";
-  let highestValue = 0;
-
-  for (const [key, value] of map) {
-    if (value > highestValue) {
-      highestKey = key;
-      highestValue = value;
-    }
-  }
-
-  return highestKey;
-};
 
 export const rebaseUrlIfNeeded = (
   url: string,

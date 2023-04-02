@@ -2,6 +2,7 @@ import { type Entry } from "@src/interfaces/Entry";
 import { type RecorderConfiguration } from "@src/interfaces/RecorderConfiguration";
 import { sortRequestsByDate } from "@src/utils/date";
 import { handleBasicAuth } from "@src/utils/generate/basicAuth";
+import { handleDefaultRequestHeaders } from "@src/utils/generate/defaultRequestHeaders";
 import { filterHeaders } from "@src/utils/generate/filterHeaders";
 import { groupRequests } from "@src/utils/generate/group";
 import { interResources } from "@src/utils/generate/inferHtmlResources";
@@ -89,18 +90,18 @@ const generate = (
   //     - if the text length is 100 or less, generate a StringBody
   //     - otherwise, dump the content into a file and generate a ElFileBody
   //   - otherwise dump the content into a file and generate a RawFileBody
-  const simulationWithFiles = handleRequestBodies(authenticatedSimulation);
+  const simulationWithBodies = handleRequestBodies(authenticatedSimulation);
 
   // Step #10: determine default request headers
   // Determine the header names that are available on all the requests.
   // For each of these header names, determine the most frequent value.
   // Store these header (name, value) pairs and remove them from all the requests (meaning that headers with a different value will remain)
-  // TODO
+  const simulationWithDefaultHeaders =
+    handleDefaultRequestHeaders(simulationWithBodies);
 
   // Step #11: compute request headers groups
   // Collect identical header groups and sort them by first occurrence.
   // Make each request point to its corresponding group.
-  // TODO
 
   return "";
 };

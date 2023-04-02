@@ -6,12 +6,7 @@ import {
 } from "@src/interfaces/Entry";
 
 import { GROUPED_ENTRIES } from "./group.test";
-import {
-  addUrls,
-  getKeyWithHighestValue,
-  getBaseUrlCounts,
-  rebaseUrlIfNeeded,
-} from "./url";
+import { addUrls, getBaseUrlCounts, rebaseUrlIfNeeded } from "./url";
 
 const URL_MAP_COUNTS = new Map([
   ["https://other-site-example.net", 1],
@@ -21,14 +16,6 @@ const URL_MAP_COUNTS = new Map([
 describe("getBaseUrlCounts", () => {
   it("should count urls", () => {
     expect(getBaseUrlCounts(GROUPED_ENTRIES)).toEqual(URL_MAP_COUNTS);
-  });
-});
-
-describe("getKeyWithHighestValue", () => {
-  it("should return most common base url", () => {
-    expect(getKeyWithHighestValue(URL_MAP_COUNTS)).toEqual(
-      "https://pwn-association.org"
-    );
   });
 });
 
