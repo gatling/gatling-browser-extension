@@ -9,6 +9,7 @@ import { interResources } from "@src/utils/generate/inferHtmlResources";
 import { lowerCaseHeaderNames } from "@src/utils/generate/lowerCaseHeaderName";
 import { mergeRedirectionRequests } from "@src/utils/generate/redirection";
 import { handleRequestBodies } from "@src/utils/generate/requestBody";
+import { handleRequestHeadersGroups } from "@src/utils/generate/requestHeadersGroups";
 import { addUrls } from "@src/utils/generate/url";
 
 const generate = (
@@ -106,6 +107,9 @@ const generate = (
   // Step #11: compute request headers groups
   // Collect identical header groups and sort them by first occurrence.
   // Make each request point to its corresponding group.
+  const simulationWithRequestHeadersGroups = handleRequestHeadersGroups(
+    simulationWithDefaultHeaders
+  );
 
   return "";
 };

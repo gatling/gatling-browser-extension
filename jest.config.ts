@@ -11,6 +11,7 @@ const config: Config.InitialOptions = {
     "@src(.*)$": "<rootDir>/$1",
     '^lodash-es$': 'lodash',
     '^lodash-es/cloneDeep$': 'lodash/cloneDeep',
+    '^lodash-es/isEqual$': 'lodash/isEqual',
     "\\.(css|scss)$": "identity-obj-proxy"
   }
 };

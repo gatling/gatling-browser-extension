@@ -13,6 +13,7 @@ export type RebasedEntry = SimpleEntry & {
     rawFileBodyId?: number;
     elFileBodyId?: number;
     stringBodyId?: number;
+    headersGroupId?: number;
   };
 };
 
@@ -46,6 +47,11 @@ export interface SimulationWithBodies extends AuthenticatedSimulation {
 export interface SimulationWithDefaultRequestHeaders
   extends SimulationWithBodies {
   defaultRequestHeaders: Map<string, string>;
+}
+
+export interface SimulationsWithCommonRequestHeaders
+  extends SimulationWithDefaultRequestHeaders {
+  commonRequestHeaders: Map<number, Header[]>;
 }
 
 export interface Header {
