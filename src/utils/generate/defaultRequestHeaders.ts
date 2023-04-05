@@ -13,11 +13,11 @@ const getPossibleHeaderNames = (
 
   groupedEntries.forEach((entries) => {
     entries.root.request.headers.forEach((header) =>
-      possibleHeaderNames.add(header.name.toLowerCase())
+      possibleHeaderNames.add(header.name)
     );
     entries.resources.forEach((resources) =>
       resources.request.headers.forEach((header) =>
-        possibleHeaderNames.add(header.name.toLowerCase())
+        possibleHeaderNames.add(header.name)
       )
     );
   });
@@ -29,20 +29,20 @@ const isAvailableOnEveryRequest = (
   headerName: string
 ): boolean => {
   for (const entries of groupedEntries) {
-    const rootRequestHeaderNames = entries.root.request.headers.map((header) =>
-      header.name.toLowerCase()
+    const rootRequestHeaderNames = entries.root.request.headers.map(
+      (header) => header.name
     );
 
-    if (!rootRequestHeaderNames.includes(headerName.toLowerCase())) {
+    if (!rootRequestHeaderNames.includes(headerName)) {
       return false;
     }
 
     for (const resources of entries.resources) {
       const resourceRequestHeaderNames = resources.request.headers.map(
-        (header) => header.name.toLowerCase()
+        (header) => header.name
       );
 
-      if (!resourceRequestHeaderNames.includes(headerName.toLowerCase())) {
+      if (!resourceRequestHeaderNames.includes(headerName)) {
         return false;
       }
     }
@@ -59,11 +59,11 @@ export const getHeaderNamesAvailableOnAllRequest = (
   );
 
 export const getDefaultHeaderCount = (
-  header: string,
+  headerName: string,
   headers: Header[]
 ): Map<string, number> =>
   headers.reduce((acc: Map<string, number>, {name, value}: Header) => {
-    if (name.toLowerCase() === header.toLowerCase()) {
+    if (name === headerName) {
       return acc.has(value)
         ? acc.set(value, acc.get(value)! + 1)
         : acc.set(value, 1);
@@ -108,8 +108,8 @@ export const removeDefaultHeaders = (
 ): Header[] =>
   headers.filter(
     (header) =>
-      !defaultRequestHeadersKeys.includes(header.name.toLowerCase()) ||
-      defaultRequestHeaders.get(header.name.toLowerCase()) !== header.value
+      !defaultRequestHeadersKeys.includes(header.name) ||
+      defaultRequestHeaders.get(header.name) !== header.value
   );
 
 export const removeDefaultHeadersOnRequests = (

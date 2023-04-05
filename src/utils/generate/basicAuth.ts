@@ -9,7 +9,7 @@ import {
 } from "@src/interfaces/Entry";
 
 export const isAuthorization = (header: Header): boolean =>
-  "authorization" === header.name.toLowerCase();
+  "authorization" === header.name;
 
 export const isBasicAuth = (header: Header): boolean =>
   isAuthorization(header) && header.value.startsWith("Basic ");

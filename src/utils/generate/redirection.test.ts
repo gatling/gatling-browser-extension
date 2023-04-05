@@ -450,35 +450,35 @@ const entry3: SimpleEntry = {
         value: "https://gatling.io",
       },
       {
-        name: "Accept-Ranges",
+        name: "accept-ranges",
         value: "bytes",
       },
       {
-        name: "Connection",
+        name: "connection",
         value: "keep-alive",
       },
       {
-        name: "Content-Length",
+        name: "content-length",
         value: "3862",
       },
       {
-        name: "Content-Type",
+        name: "content-type",
         value: "text/css",
       },
       {
-        name: "Date",
+        name: "date",
         value: "Mon, 06 Mar 2023 13:57:01 GMT",
       },
       {
-        name: "ETag",
+        name: "etag",
         value: '"62c2e8b0-f16"',
       },
       {
-        name: "Last-Modified",
+        name: "last-modified",
         value: "Mon, 04 Jul 2022 13:18:40 GMT",
       },
       {
-        name: "Server",
+        name: "server",
         value: "nginx/1.17.5",
       },
     ],
@@ -730,47 +730,47 @@ const entry5: SimpleEntry = {
           "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
       },
       {
-        name: "Accept-Encoding",
+        name: "accept-encoding",
         value: "gzip, deflate, br",
       },
       {
-        name: "Accept-Language",
+        name: "accept-language",
         value: "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
       },
       {
-        name: "Cache-Control",
+        name: "cache-control",
         value: "no-cache",
       },
       {
-        name: "Connection",
+        name: "connection",
         value: "keep-alive",
       },
       {
-        name: "Host",
+        name: "host",
         value: "flusin.ovh",
       },
       {
-        name: "Pragma",
+        name: "pragma",
         value: "no-cache",
       },
       {
-        name: "Referer",
+        name: "referer",
         value: "https://flusin.ovh/",
       },
       {
-        name: "Sec-Fetch-Dest",
+        name: "sec-fetch-dest",
         value: "image",
       },
       {
-        name: "Sec-Fetch-Mode",
+        name: "sec-fetch-mode",
         value: "no-cors",
       },
       {
-        name: "Sec-Fetch-Site",
+        name: "sec-fetch-site",
         value: "same-origin",
       },
       {
-        name: "User-Agent",
+        name: "user-agent",
         value:
           "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
       },
@@ -803,35 +803,35 @@ const entry5: SimpleEntry = {
         value: "response-entry5",
       },
       {
-        name: "Accept-Ranges",
+        name: "accept-ranges",
         value: "bytes",
       },
       {
-        name: "Connection",
+        name: "connection",
         value: "keep-alive",
       },
       {
-        name: "Content-Length",
+        name: "content-length",
         value: "2867",
       },
       {
-        name: "Content-Type",
+        name: "content-type",
         value: "image/svg+xml",
       },
       {
-        name: "Date",
+        name: "date",
         value: "Mon, 06 Mar 2023 13:57:02 GMT",
       },
       {
-        name: "ETag",
+        name: "etag",
         value: '"5df26cfe-b33"',
       },
       {
-        name: "Last-Modified",
+        name: "last-modified",
         value: "Thu, 12 Dec 2019 16:38:22 GMT",
       },
       {
-        name: "Server",
+        name: "server",
         value: "nginx/1.17.5",
       },
     ],

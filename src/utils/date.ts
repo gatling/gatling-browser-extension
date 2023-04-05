@@ -1,4 +1,4 @@
-import { type Entry } from "@src/interfaces/Entry";
+import { type SimpleEntry } from "@src/interfaces/Entry";
 
 const addLeadingZeros = (n: number): string => {
   if (n <= 9) {
@@ -20,7 +20,7 @@ export const formatDate = (currentDatetime: Date): string =>
   "-" +
   addLeadingZeros(currentDatetime.getSeconds());
 
-export const sortRequestsByDate = (a: Entry, b: Entry): number => {
+export const sortRequestsByDate = (a: SimpleEntry, b: SimpleEntry): number => {
   const startedDateTimeA = new Date(a.startedDateTime).getTime();
   const startedDateTimeB = new Date(b.startedDateTime).getTime();
   return startedDateTimeA - startedDateTimeB;

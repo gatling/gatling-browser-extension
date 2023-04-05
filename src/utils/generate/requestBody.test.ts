@@ -12,8 +12,8 @@ import {
 
 const HEADERS: Header[] = [
   {
-    name: "contenT-type",
-    value: "application/x-www-form-urlencodeD",
+    name: "content-type",
+    value: "application/x-www-form-urlencoded",
   },
   {
     name: "testName",

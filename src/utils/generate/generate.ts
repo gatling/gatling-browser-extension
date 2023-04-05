@@ -1,4 +1,4 @@
-import { type Entry } from "@src/interfaces/Entry";
+import { type SimpleEntry } from "@src/interfaces/Entry";
 import { type RecorderConfiguration } from "@src/interfaces/RecorderConfiguration";
 import { sortRequestsByDate } from "@src/utils/date";
 import { handleBasicAuth } from "@src/utils/generate/basicAuth";
@@ -6,19 +6,23 @@ import { handleDefaultRequestHeaders } from "@src/utils/generate/defaultRequestH
 import { filterHeaders } from "@src/utils/generate/filterHeaders";
 import { groupRequests } from "@src/utils/generate/group";
 import { interResources } from "@src/utils/generate/inferHtmlResources";
+import { lowerCaseHeaderNames } from "@src/utils/generate/lowerCaseHeaderName";
 import { mergeRedirectionRequests } from "@src/utils/generate/redirection";
 import { handleRequestBodies } from "@src/utils/generate/requestBody";
 import { addUrls } from "@src/utils/generate/url";
 
 const generate = (
-  entries: Entry[],
+  entries: SimpleEntry[],
   configuration: RecorderConfiguration
 ): string => {
   // Specifications: https://gatlingcorp.atlassian.net/browse/RND-17
 
+  // Step #0: convert all header names to lower case
+  const lowerCaseEntries = lowerCaseHeaderNames(entries);
+
   // Step #1: sort
   // Sort all requests by start timestamp asc
-  const sortedEntries = [...entries].sort(sortRequestsByDate);
+  const sortedEntries = [...lowerCaseEntries].sort(sortRequestsByDate);
 
   // Step #2: merge redirects
   // If the followRedirect option is enabled (default behavior), merge redirect chains into 1 single request:

@@ -86,8 +86,8 @@ const ENTRY2: RebasedGroupedEntry = {
         httpVersion: "2",
         cookies: [],
         headers: [
-          { name: "content-tYpe", value: "application/json" },
-          { name: "tesT", value: "hello" },
+          {name: "content-type", value: "application/json"},
+          {name: "test", value: "hello"},
         ],
         headersSize: 25,
         bodySize: 12,
