@@ -1,18 +1,26 @@
-import { JSDOM } from "jsdom";
+import * as htmlparser2 from "htmlparser2";
 
 import { type GroupedEntry } from "@src/interfaces/Entry";
 
 export const getResourcesFromHtml = (body: string): string[] => {
-  const dom = new JSDOM(body);
-  const links = Array.from(dom.window.document.querySelectorAll("link")).map(
-    (link) => link.href
-  );
-  const scripts = Array.from(
-    dom.window.document.querySelectorAll("script")
-  ).map((script) => script.src);
-  const images = Array.from(dom.window.document.querySelectorAll("img")).map(
-    (img) => img.src
-  );
+  const links: string[] = [];
+  const scripts: string[] = [];
+  const images: string[] = [];
+  const parser = new htmlparser2.Parser({
+    onopentag(name, attrs): void {
+      if (name === "link" && attrs.href) {
+        links.push(attrs.href);
+      }
+      if (name === "script" && attrs.src) {
+        scripts.push(attrs.src);
+      }
+      if (name === "img" && attrs.src) {
+        images.push(attrs.src);
+      }
+    },
+  });
+  parser.write(body);
+  parser.end();
   return [...links, ...images, ...scripts].filter(Boolean);
 };
 
