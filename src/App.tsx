@@ -7,6 +7,7 @@ import { type HarItem } from "@src/interfaces/HarItem";
 import { startRecording, stopRecording } from "@src/utils/devtools";
 
 import styles from "./App.module.scss";
+import "./Colors.module.scss";
 
 const App = (): ReactElement => {
   const [recording, setRecording] = useState(false);

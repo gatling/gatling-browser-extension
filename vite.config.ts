@@ -10,5 +10,7 @@ export default defineConfig({
       '@src': path.resolve(__dirname, './src'),
     }
   },
-  plugins: [react(), eslint()],
+  plugins: [react(), eslint({
+    exclude: ['/virtual:/**', 'node_modules/**'],
+  })],
 })
