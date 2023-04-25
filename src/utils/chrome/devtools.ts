@@ -5,7 +5,7 @@ import { formatDate } from "@src/utils/date";
 let currentHarItem: HarItem;
 
 const onRequestFinishedListener = (request: Entry): void => {
-  if (currentHarItem.requests.length === 0 && request.request.url) {
+  if (currentHarItem.entries.length === 0 && request.request.url) {
     currentHarItem.domain = new URL(request.request.url).hostname;
   }
 
@@ -14,7 +14,7 @@ const onRequestFinishedListener = (request: Entry): void => {
       request.response.content.text = content;
     }
 
-    currentHarItem.requests.push(request);
+    currentHarItem.entries.push(request);
   });
 };
 
@@ -25,7 +25,7 @@ export const startRecording = (): void => {
     id: date,
     date,
     domain: "no-domain",
-    requests: [],
+    entries: [],
   };
 
   chrome.devtools.network.onRequestFinished.addListener(

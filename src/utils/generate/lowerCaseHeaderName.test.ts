@@ -50,8 +50,8 @@ const ENTRY1: SimpleEntry = {
     httpVersion: "2",
     cookies: [],
     headers: [
-      {name: "Content-Type", value: "application/x-www-form-urlencoded"},
-      {name: "TeSt", value: "hello"},
+      { name: "Content-Type", value: "application/x-www-form-urlencoded" },
+      { name: "TeSt", value: "hello" },
     ],
     headersSize: 25,
     bodySize: 12,
@@ -74,9 +74,9 @@ const ENTRY2: SimpleEntry = {
     httpVersion: "2",
     cookies: [],
     headers: [
-      {name: "conTent-type", value: "application/json"},
-      {name: "tEst", value: "world"},
-      {name: "fOo", value: "bar"},
+      { name: "conTent-type", value: "application/json" },
+      { name: "tEst", value: "world" },
+      { name: "fOo", value: "bar" },
     ],
     headersSize: 25,
     bodySize: 12,
@@ -94,8 +94,8 @@ const ENTRY2: SimpleEntry = {
 
 const EXPECTED_ENTRY1: SimpleEntry = cloneDeep(ENTRY1);
 EXPECTED_ENTRY1.request.headers = [
-  {name: "content-type", value: "application/x-www-form-urlencoded"},
-  {name: "test", value: "hello"},
+  { name: "content-type", value: "application/x-www-form-urlencoded" },
+  { name: "test", value: "hello" },
 ];
 EXPECTED_ENTRY1.response.headers = [
   {
@@ -106,9 +106,9 @@ EXPECTED_ENTRY1.response.headers = [
 
 const EXPECTED_ENTRY2: SimpleEntry = cloneDeep(ENTRY2);
 EXPECTED_ENTRY2.request.headers = [
-  {name: "content-type", value: "application/json"},
-  {name: "foo", value: "bar"},
-  {name: "test", value: "world"},
+  { name: "content-type", value: "application/json" },
+  { name: "foo", value: "bar" },
+  { name: "test", value: "world" },
 ];
 EXPECTED_ENTRY2.response.headers = [
   {

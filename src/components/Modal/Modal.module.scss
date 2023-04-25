@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  box-shadow: rgb(100 100 111 / 30%) 0px 7px 29px 0px;
+  background-color: white;
+  border: 2px solid rgb(240, 240, 240);
+  border-radius: 12px;
+  position: absolute;
+  width: 96%;
+  top: 10%;
+  left: 2%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+
+.close {
+  font-size: 1.4rem;
+  margin: 0.5rem;
+  background: none;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--button-outline-primary-text-color);
+  }
+}
+
+.body {
+  width: 100%;
+}

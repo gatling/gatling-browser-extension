@@ -13,7 +13,7 @@ $frontline-color-white: #ffffff;
   gap: 0.2rem;
 }
 
-.deleteButton, .downloadButton {
+.deleteButton, .downloadButton, .generateButton {
   border-radius: 4px;
   padding: 8px;
 
@@ -34,7 +34,7 @@ $frontline-color-white: #ffffff;
   }
 }
 
-.downloadButton {
+.downloadButton, .generateButton {
   background-color: var(--button-outline-primary-background-color);
   color: var(--button-outline-primary-text-color);
   border: 1px solid var(--button-outline-primary-border-color);

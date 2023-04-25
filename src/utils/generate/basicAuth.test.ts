@@ -11,8 +11,8 @@ import { handleBasicAuth } from "./basicAuth";
 const simulationWithAuthorization: Simulation = cloneDeep(EXPECTED_SIMULATION);
 simulationWithAuthorization.groupedEntries[0].root.request.headers = [
   ...simulationWithAuthorization.groupedEntries[0].root.request.headers,
-  {name: "authorization", value: "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ=="},
-  {name: "authorization", value: "fake basic auth"},
+  { name: "authorization", value: "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==" },
+  { name: "authorization", value: "fake basic auth" },
 ];
 
 const EXPECTED_WITH_CREDENTIALS: AuthenticatedSimulation = {
@@ -24,8 +24,8 @@ const simulationWith2Authorizations: Simulation =
   cloneDeep(EXPECTED_SIMULATION);
 simulationWith2Authorizations.groupedEntries[0].root.request.headers = [
   ...simulationWith2Authorizations.groupedEntries[0].root.request.headers,
-  {name: "authorization", value: "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ=="},
-  {name: "authorization", value: "Basic other"},
+  { name: "authorization", value: "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==" },
+  { name: "authorization", value: "Basic other" },
 ];
 
 describe("handleBasicAuth", () => {

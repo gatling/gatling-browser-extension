@@ -11,7 +11,7 @@ export const download = (item: HarItem): void => {
         name: "Gatling Browser Extension",
         version: "1.0.0",
       },
-      entries: item.requests,
+      entries: item.entries,
     },
   };
 

@@ -4,5 +4,5 @@ export interface HarItem {
   id: string;
   date: string;
   domain: string;
-  requests: SimpleEntry[];
+  entries: SimpleEntry[];
 }

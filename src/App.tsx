@@ -4,7 +4,7 @@ import Alert from "@src/components/Alert";
 import Hars from "@src/components/Hars";
 import RecordButton from "@src/components/RecordButton";
 import { type HarItem } from "@src/interfaces/HarItem";
-import { startRecording, stopRecording } from "@src/utils/devtools";
+import { startRecording, stopRecording } from "@src/utils/chrome/devtools";
 
 import styles from "./App.module.scss";
 import "./Colors.module.scss";

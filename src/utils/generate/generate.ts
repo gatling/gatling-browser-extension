@@ -1,5 +1,6 @@
 import { type SimpleEntry } from "@src/interfaces/Entry";
 import { type RecorderConfiguration } from "@src/interfaces/RecorderConfiguration";
+import { downloadSimulation } from "@src/utils/chrome/downloads";
 import { sortRequestsByDate } from "@src/utils/date";
 import { handleBasicAuth } from "@src/utils/generate/basicAuth";
 import { handleDefaultRequestHeaders } from "@src/utils/generate/defaultRequestHeaders";
@@ -12,10 +13,10 @@ import { handleRequestBodies } from "@src/utils/generate/requestBody";
 import { handleRequestHeadersGroups } from "@src/utils/generate/requestHeadersGroups";
 import { addUrls } from "@src/utils/generate/url";
 
-const generate = (
+export const generate = (
   entries: SimpleEntry[],
   configuration: RecorderConfiguration
-): string => {
+): void => {
   // Specifications: https://gatlingcorp.atlassian.net/browse/RND-17
 
   // Step #0: convert all header names to lower case
@@ -111,5 +112,5 @@ const generate = (
     simulationWithDefaultHeaders
   );
 
-  return "";
+  return downloadSimulation(simulationWithRequestHeadersGroups, configuration);
 };

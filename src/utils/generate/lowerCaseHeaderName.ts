@@ -1,8 +1,8 @@
 import { type SimpleEntry, type Header } from "@src/interfaces/Entry";
 
-const toLowerCase = ({name, value}: Header): Header => ({
+const toLowerCase = ({ name, value }: Header): Header => ({
   name: name.toLowerCase(),
-  value: value,
+  value,
 });
 
 const sortByName = (a: Header, b: Header): number =>

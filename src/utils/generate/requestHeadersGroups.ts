@@ -38,5 +38,5 @@ export const handleRequestHeadersGroups = (
     return entry;
   });
 
-  return {...simulation, commonRequestHeaders, groupedEntries};
+  return { ...simulation, commonRequestHeaders, groupedEntries };
 };

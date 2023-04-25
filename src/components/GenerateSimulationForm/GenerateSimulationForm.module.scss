@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 1rem 1rem 1rem;
+  gap: 1rem;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.simulationInformationBody {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.textFields {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-around;
+}
+
+.filtersHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.2rem;
+}
+
+.cancelButton, .generateButton {
+  border-radius: 4px;
+  padding: 8px;
+
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.generateButton {
+  background-color: var(--button-primary-background-color);
+  color: var(--button-primary-text-color);
+  border: none;
+
+  &:not(:disabled) {
+    &:hover, &:active {
+      background-color: var(--button-primary-background-color-hover);
+      color: var(--button-primary-text-color-hover);
+    }
+  }
+}
+
+.cancelButton {
+  background-color: var(--button-outline-primary-background-color);
+  color: var(--button-outline-primary-text-color);
+  border: 1px solid var(--button-outline-primary-border-color);
+
+  &:not(:disabled) {
+    &:hover, &:active {
+      background-color: var(--button-outline-primary-background-color-hover);
+      color: var(--button-outline-primary-text-color-hover);
+    }
+  }
+}
+
+input[type=checkbox], select {
+  cursor: pointer;
+}

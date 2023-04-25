@@ -1,7 +1,11 @@
 import { type ReactElement, useCallback } from "react";
 
+import GenerateSimulationButton from "@src/components/GenerateSimulationButton";
+import { type SimpleEntry } from "@src/interfaces/Entry";
 import { type HarItem } from "@src/interfaces/HarItem";
+import { type RecorderConfiguration } from "@src/interfaces/RecorderConfiguration";
 import { download, getFilename } from "@src/utils/file";
+import { generate } from "@src/utils/generate/generate";
 
 import styles from "./Hars.module.scss";
 
@@ -17,6 +21,37 @@ const Hars = ({ items, onClickDelete }: HarsProps): ReactElement => {
     },
     [onClickDelete]
   );
+
+  const handleClickGenerate = useCallback((entries: SimpleEntry[]) => {
+    const config: RecorderConfiguration = {
+      core: {
+        className: "RecorderDevSimulation",
+        encoding: "utf-8",
+        simulationsFolder: "",
+        resourcesFolder: "",
+        pkg: "io.gatling.dev",
+        saveConfig: false,
+        thresholdForPauseCreation: 100,
+        format: "java17",
+      },
+      http: {
+        automaticReferer: true,
+        followRedirect: true,
+        removeCacheHeaders: true,
+        inferHtmlResources: true,
+        checkResponseBodies: false,
+        useSimulationAsPrefix: false,
+        useMethodAndUriAsPostfix: false,
+      },
+      filters: {
+        enabled: false,
+        allowList: [],
+        denyList: [],
+      },
+    };
+    console.log("entries:", entries);
+    generate(entries, config);
+  }, []);
 
   return (
     <table>
@@ -39,6 +74,13 @@ const Hars = ({ items, onClickDelete }: HarsProps): ReactElement => {
                 >
                   Download
                 </button>
+                <button
+                  className={styles.generateButton}
+                  onClick={(): void => handleClickGenerate(item.entries)}
+                >
+                  Generate simulation
+                </button>
+                <GenerateSimulationButton className={styles.generateButton} />
                 <button
                   className={styles.deleteButton}
                   onClick={(): void => handleClickDelete(item.id)}

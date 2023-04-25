@@ -20,8 +20,6 @@ export interface CoreConfiguration {
   className: string;
   thresholdForPauseCreation: number; // Duration on Scala
   saveConfig: boolean;
-  headless: boolean;
-  harFilePath?: string;
   format: "java8" | "java11" | "java17" | "kotlin" | "scala";
 }
 

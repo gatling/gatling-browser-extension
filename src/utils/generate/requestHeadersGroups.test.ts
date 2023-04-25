@@ -33,8 +33,8 @@ const ENTRY1: RebasedGroupedEntry = {
       httpVersion: "2",
       cookies: [],
       headers: [
-        {name: "content-type", value: "application/json"},
-        {name: "test", value: "hello"},
+        { name: "content-type", value: "application/json" },
+        { name: "test", value: "hello" },
       ],
       headersSize: 25,
       bodySize: 12,
@@ -62,9 +62,9 @@ const ENTRY2: RebasedGroupedEntry = {
       httpVersion: "2",
       cookies: [],
       headers: [
-        {name: "content-type", value: "application/json"},
-        {name: "foo", value: "bar"},
-        {name: "test", value: "world"},
+        { name: "content-type", value: "application/json" },
+        { name: "foo", value: "bar" },
+        { name: "test", value: "world" },
       ],
       headersSize: 25,
       bodySize: 12,
@@ -87,8 +87,8 @@ const ENTRY2: RebasedGroupedEntry = {
         httpVersion: "2",
         cookies: [],
         headers: [
-          {name: "content-type", value: "application/json"},
-          {name: "test", value: "hello"},
+          { name: "content-type", value: "application/json" },
+          { name: "test", value: "hello" },
         ],
         headersSize: 25,
         bodySize: 12,
@@ -110,8 +110,8 @@ const ENTRY2: RebasedGroupedEntry = {
         httpVersion: "2",
         cookies: [],
         headers: [
-          {name: "content-type", value: "text/plain"},
-          {name: "test", value: "world"},
+          { name: "content-type", value: "text/plain" },
+          { name: "test", value: "world" },
         ],
         headersSize: 25,
         bodySize: 12,
@@ -139,8 +139,8 @@ const ENTRY3: RebasedGroupedEntry = {
       httpVersion: "2",
       cookies: [],
       headers: [
-        {name: "content-type", value: "text/plain"},
-        {name: "test", value: "world"},
+        { name: "content-type", value: "text/plain" },
+        { name: "test", value: "world" },
       ],
       headersSize: 25,
       bodySize: 12,
@@ -169,19 +169,19 @@ const SIMULATION: SimulationWithDefaultRequestHeaders = {
 };
 
 const HEADERS_GROUP_1: Header[] = [
-  {name: "content-type", value: "application/json"},
-  {name: "test", value: "hello"},
+  { name: "content-type", value: "application/json" },
+  { name: "test", value: "hello" },
 ];
 
 const HEADERS_GROUP_2: Header[] = [
-  {name: "content-type", value: "application/json"},
-  {name: "foo", value: "bar"},
-  {name: "test", value: "world"},
+  { name: "content-type", value: "application/json" },
+  { name: "foo", value: "bar" },
+  { name: "test", value: "world" },
 ];
 
 const HEADERS_GROUP_3: Header[] = [
-  {name: "content-type", value: "text/plain"},
-  {name: "test", value: "world"},
+  { name: "content-type", value: "text/plain" },
+  { name: "test", value: "world" },
 ];
 
 const EXPECTED_ENTRY1: RebasedGroupedEntry = cloneDeep(ENTRY1);

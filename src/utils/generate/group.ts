@@ -6,7 +6,7 @@ const createNewGroup = (entry: SimpleEntry): GroupedEntry => {
   const sendTime = new Date(entry.startedDateTime).getTime();
   return {
     root: entry,
-    sendTime: sendTime,
+    sendTime,
     arrivalTime: sendTime + TIMESTAMP_100_MS,
     resources: [],
   };

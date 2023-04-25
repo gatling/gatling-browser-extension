@@ -62,7 +62,7 @@ export const getDefaultHeaderCount = (
   headerName: string,
   headers: Header[]
 ): Map<string, number> =>
-  headers.reduce((acc: Map<string, number>, {name, value}: Header) => {
+  headers.reduce((acc: Map<string, number>, { name, value }: Header) => {
     if (name === headerName) {
       return acc.has(value)
         ? acc.set(value, acc.get(value)! + 1)
@@ -136,9 +136,9 @@ export const removeDefaultHeadersOnRequests = (
 };
 
 export const handleDefaultRequestHeaders = ({
-                                              groupedEntries,
-                                              ...simulation
-                                            }: SimulationWithBodies): SimulationWithDefaultRequestHeaders => {
+  groupedEntries,
+  ...simulation
+}: SimulationWithBodies): SimulationWithDefaultRequestHeaders => {
   const headerNamesAvailableOnAllRequest =
     getHeaderNamesAvailableOnAllRequest(groupedEntries);
 
