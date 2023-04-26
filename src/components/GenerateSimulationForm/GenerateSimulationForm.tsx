@@ -1,6 +1,7 @@
-import { type ReactElement } from "react";
+import { type ReactElement, useCallback, useState } from "react";
 
 import Card from "@src/components/Card";
+import FilterList from "@src/components/FilterList";
 
 import styles from "./GenerateSimulationForm.module.scss";
 
@@ -11,6 +12,10 @@ export interface GenerateSimulationFormProps {
 const GenerateSimulationForm = ({
   onClose,
 }: GenerateSimulationFormProps): ReactElement => {
+  const [enableFilters, setEnableFilters] = useState<boolean>(false);
+  const handleClickEnableFilters = useCallback((value: boolean) => {
+    setEnableFilters(value);
+  }, []);
   return (
     <div className={styles.container}>
       <div className={styles.body}>
@@ -107,12 +112,31 @@ const GenerateSimulationForm = ({
           </div>
         </Card>
         <Card title="Filters">
-          <div className={styles.filtersHeader}>
-            <label>Java regular expressions that match the entireURL</label>
-            <label htmlFor="enableFilters">
-              <input type="checkbox" id="enableFilters" name="enableFilters" />
-              Enable Filters
-            </label>
+          <div className={styles.filters}>
+            <div className={styles.filtersHeader}>
+              <label>Java regular expressions that match the entireURL</label>
+              <label htmlFor="enableFilters">
+                <input
+                  type="checkbox"
+                  id="enableFilters"
+                  name="enableFilters"
+                  checked={enableFilters}
+                  onChange={(e): void =>
+                    handleClickEnableFilters(e.target.checked)
+                  }
+                />
+                Enable Filters
+              </label>
+            </div>
+            <div className={styles.filtersBody}>
+              <FilterList type="allow" />
+              <FilterList
+                type="deny"
+                onClickStaticResources={(): void =>
+                  handleClickEnableFilters(true)
+                }
+              />
+            </div>
           </div>
         </Card>
       </div>
