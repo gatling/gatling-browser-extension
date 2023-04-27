@@ -2,6 +2,7 @@ import { type ReactElement, useCallback, useState } from "react";
 
 import Card from "@src/components/Card";
 import FilterList from "@src/components/FilterList";
+import { ENCODING_ITEMS } from "@src/constants/encoding";
 
 import styles from "./GenerateSimulationForm.module.scss";
 
@@ -110,6 +111,16 @@ const GenerateSimulationForm = ({
               </label>
             </div>
           </div>
+        </Card>
+        <Card title="Output">
+          <label htmlFor="format">Encoding</label>
+          <select id="format" name="format" defaultValue="utf-8">
+            {Array.from(ENCODING_ITEMS).map(([key, value]) => (
+              <option key={key} value={key}>
+                {value}
+              </option>
+            ))}
+          </select>
         </Card>
         <Card title="Filters">
           <div className={styles.filters}>

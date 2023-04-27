@@ -1,8 +1,8 @@
 import { type ReactElement, useState } from "react";
 
 import { createPortal } from "react-dom";
-import GenerateSimulationForm from "src/components/GenerateSimulationForm";
 
+import GenerateSimulationForm from "@src/components/GenerateSimulationForm";
 import Modal from "@src/components/Modal";
 
 export interface GenerateSimulationButtonProps {
