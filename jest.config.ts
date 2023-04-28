@@ -13,7 +13,8 @@ const config: Config.InitialOptions = {
     '^lodash-es/cloneDeep$': 'lodash/cloneDeep',
     '^lodash-es/isEqual$': 'lodash/isEqual',
     "\\.(css|scss)$": "identity-obj-proxy"
-  }
+  },
+  testEnvironment: "jsdom"
 };
 
 export default config;

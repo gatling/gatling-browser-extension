@@ -1,26 +1,14 @@
-import * as htmlparser2 from "htmlparser2";
-
 import { type GroupedEntry } from "@src/interfaces/Entry";
 
 export const getResourcesFromHtml = (body: string): string[] => {
-  const links: string[] = [];
-  const scripts: string[] = [];
-  const images: string[] = [];
-  const parser = new htmlparser2.Parser({
-    onopentag(name, attrs): void {
-      if (name === "link" && attrs.href) {
-        links.push(attrs.href);
-      }
-      if (name === "script" && attrs.src) {
-        scripts.push(attrs.src);
-      }
-      if (name === "img" && attrs.src) {
-        images.push(attrs.src);
-      }
-    },
-  });
-  parser.write(body);
-  parser.end();
+  const doc = new DOMParser().parseFromString(body, "text/html");
+  const links = Array.from(doc.querySelectorAll("link")).map(
+    (link) => link.href
+  );
+  const scripts = Array.from(doc.querySelectorAll("script")).map(
+    (script) => script.src
+  );
+  const images = Array.from(doc.querySelectorAll("img")).map((img) => img.src);
   return [...links, ...images, ...scripts].filter(Boolean);
 };
 
