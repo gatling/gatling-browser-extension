@@ -37,6 +37,32 @@
   gap: 0.5rem;
 }
 
+.outputBody {
+  display: flex;
+  gap: 1rem;
+}
+
+.directories {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.downloadGatling {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.downloadGatlingType {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.selectDownloadType {
+  flex: 1;
+}
+
 .filtersHeader, .filtersBody {
   display: flex;
   justify-content: space-between;

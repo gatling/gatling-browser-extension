@@ -1,8 +1,22 @@
-import { type ReactElement, useCallback, useState } from "react";
+import {
+  type ReactElement,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 import Card from "@src/components/Card";
 import FilterList from "@src/components/FilterList";
 import { ENCODING_ITEMS } from "@src/constants/encoding";
+import {
+  downloadGatling,
+  getDefaultDownloadDirectory,
+  getFileName,
+  initDefaultDownloadDirectory,
+  openFileDirectory,
+  searchDownload,
+} from "@src/utils/chrome/downloads";
 
 import styles from "./GenerateSimulationForm.module.scss";
 
@@ -13,10 +27,69 @@ export interface GenerateSimulationFormProps {
 const GenerateSimulationForm = ({
   onClose,
 }: GenerateSimulationFormProps): ReactElement => {
+  const [loadingDownload, setLoadingDownload] = useState<boolean>(false);
+  const [downloadsDirectory, setDownloadsDirectory] = useState<string>("");
+  const [gatlingDirectory, setGatlingDirectory] = useState<string>("");
+  const downloadTypeRef = useRef<HTMLSelectElement>(null);
   const [enableFilters, setEnableFilters] = useState<boolean>(false);
   const handleClickEnableFilters = useCallback((value: boolean) => {
     setEnableFilters(value);
   }, []);
+
+  useEffect((): void => {
+    initDefaultDownloadDirectory().then((dir) => {
+      setDownloadsDirectory(dir);
+    });
+  }, [setDownloadsDirectory]);
+
+  const onChange = useCallback(
+    (
+      downloadId: number,
+      downloadDelta: chrome.downloads.DownloadDelta
+    ): void => {
+      if (downloadDelta.id === downloadId && downloadDelta.state?.current) {
+        if (downloadDelta.state.current === "in_progress") {
+          if (!loadingDownload) {
+            setLoadingDownload(true);
+          }
+        } else {
+          if (downloadDelta.state.current === "complete") {
+            openFileDirectory(downloadId);
+            searchDownload(downloadId).then((items) => {
+              if (items && items.length > 0) {
+                const filepath = items[0].filename;
+                const defaultDownloadDir =
+                  getDefaultDownloadDirectory(filepath);
+                const filename = getFileName(filepath);
+                setDownloadsDirectory(defaultDownloadDir);
+                setGatlingDirectory(filename);
+              }
+            });
+          }
+          setLoadingDownload(false);
+        }
+      }
+    },
+    [loadingDownload, setLoadingDownload]
+  );
+
+  const handleDownloadGatling = useCallback(() => {
+    const type = downloadTypeRef.current?.value ?? "";
+    if (type) {
+      downloadGatling(type)
+        .then((downloadId) => {
+          if (downloadId !== undefined) {
+            chrome.downloads.onChanged.addListener((downloadDelta) =>
+              onChange(downloadId, downloadDelta)
+            );
+          } else {
+            console.error("Le téléchargement a échoué");
+          }
+        })
+        .catch((e) => console.log(e));
+    }
+  }, [onChange]);
+
   return (
     <div className={styles.container}>
       <div className={styles.body}>
@@ -113,14 +186,72 @@ const GenerateSimulationForm = ({
           </div>
         </Card>
         <Card title="Output">
-          <label htmlFor="format">Encoding</label>
-          <select id="format" name="format" defaultValue="utf-8">
-            {Array.from(ENCODING_ITEMS).map(([key, value]) => (
-              <option key={key} value={key}>
-                {value}
-              </option>
-            ))}
-          </select>
+          <div className={styles.outputBody}>
+            <div className={styles.directories}>
+              <label htmlFor="downloadsDirectory">Downloads folder</label>
+              <input
+                id="downloadsDirectory"
+                onChange={(e): void => setDownloadsDirectory(e.target.value)}
+                name="downloadsDirectory"
+                type="text"
+                value={downloadsDirectory}
+              />
+              <label htmlFor="downloadsFolder">Gatling directory</label>
+              <input
+                id="gatlingDirectory"
+                onChange={(e): void => setGatlingDirectory(e.target.value)}
+                name="gatlingDirectory"
+                type="text"
+                value={gatlingDirectory}
+              />
+              <label htmlFor="format">Encoding</label>
+              <select id="format" name="format" defaultValue="utf-8">
+                {Array.from(ENCODING_ITEMS).map(([key, value]) => (
+                  <option key={key} value={key}>
+                    {value}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className={styles.downloadGatling}>
+              <label htmlFor="downloadType">Bundle or build tool</label>
+              <div className={styles.downloadGatlingType}>
+                <select
+                  className={styles.selectDownloadType}
+                  id="downloadType"
+                  ref={downloadTypeRef}
+                >
+                  <optgroup label="Bundle">
+                    <option value="gatling-bundle">Gatling Bundle</option>
+                  </optgroup>
+                  <optgroup label="Maven">
+                    <option value="gatling-maven-plugin-demo-java">Java</option>
+                    <option value="gatling-maven-plugin-demo-kotlin">
+                      Kotlin
+                    </option>
+                    <option value="gatling-maven-plugin-demo-scala">
+                      Scala
+                    </option>
+                  </optgroup>
+                  <optgroup label="Gradle">
+                    <option value="gatling-gradle-plugin-demo-java">
+                      Java
+                    </option>
+                    <option value="gatling-gradle-plugin-demo-kotlin">
+                      Kotlin
+                    </option>
+                    <option value="gatling-gradle-plugin-demo-scala">
+                      Scala
+                    </option>
+                  </optgroup>
+                  <optgroup label="SBT">
+                    <option value="gatling-sbt-plugin-demo">Scala</option>
+                  </optgroup>
+                </select>
+                <button onClick={handleDownloadGatling}>Download</button>
+              </div>
+            </div>
+          </div>
         </Card>
         <Card title="Filters">
           <div className={styles.filters}>
