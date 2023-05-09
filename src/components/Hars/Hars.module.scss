@@ -14,7 +14,7 @@ $frontline-color-white: #ffffff;
 }
 
 .deleteButton, .downloadButton, .generateButton {
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   padding: 8px;
 
   cursor: pointer;

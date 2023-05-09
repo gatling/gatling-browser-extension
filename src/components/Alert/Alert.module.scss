@@ -1,6 +1,6 @@
 $frontline-margin: 0.5rem;
 $frontline-padding: $frontline-margin;
-$frontline-border-radius: 2px;
+$frontline-border-radius: var(--border-radius);
 
 .container {
   display: flex;

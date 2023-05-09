@@ -3,7 +3,8 @@
 
   --logo: url("/images/logo.svg");
 
-  --gatling-color-primary-300: #C4C4ED;
+  --gatling-color-primary-300: #D8D8F3;
+  --gatling-color-primary-300-opacity: #D8D8F380;
   --gatling-color-primary-400: #8888DD;
   --gatling-color-primary-500: #6161d6;
   --gatling-color-primary-600: #3939CB;
@@ -16,11 +17,26 @@
   --gatling-color-error-500: #E72313;
   --gatling-color-error-600: #cf1f11;
 
+  --gatling-color-gray-800: #353638;
+  --gatling-color-gray-700: #525356;
+  --gatling-color-gray-500: #8A8D92;
+  --gatling-color-gray-400: #CFD1D6;
+  --gatling-color-gray-300: #E6E7EA;
+
+  --box-shadow: 0px 8px 16px 4px var(--gatling-color-primary-300-opacity);
+  --border: 1px solid var(--gatling-color-gray-300);
+  --border-radius: 4px;
+
   --black: #1F2024;
   --white: #f7f7f7;
 
   --background-color: var(--white);
   --text-color: var(--black);
+
+  --surface-0-color: var(--white);
+  --surface-1-color: var(--white);
+  --surface-box-shadow: var(--box-shadow);
+  --surface-border: var(--border);
 
   --button-success-background-color: var(--gatling-color-success-500);
   --button-success-background-color-hover: var(--gatling-color-success-600);
@@ -54,6 +70,11 @@
     --background-color: var(--black);
     --text-color: var(--white);
 
+    --surface-0-color: var(--gatling-color-gray-800);
+    --surface-1-color: var(--gatling-color-gray-700);
+    --surface-box-shadow: none;
+    --surface-border: none;
+
     --button-success-background-color: var(--gatling-color-success-400);
     --button-success-background-color-hover: var(--gatling-color-success-500);
     --button-success-text-color: var(--black);
@@ -63,9 +84,9 @@
     --button-danger-text-color: var(--black);
 
     --button-primary-background-color: var(--gatling-color-primary-300);
-    --button-primary-text-color: var(--white);
+    --button-primary-text-color: var(--black);
     --button-primary-background-color-hover: var(--gatling-color-primary-400);
-    --button-primary-text-color-hover: var(--white);
+    --button-primary-text-color-hover: var(--black);
 
     --button-outline-primary-background-color: var(--black);
     --button-outline-primary-text-color: var(--gatling-color-primary-400);

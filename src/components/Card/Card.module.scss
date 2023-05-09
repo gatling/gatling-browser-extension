@@ -2,7 +2,16 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: var(--background-color);
+  border: var(--surface-border);
+}
+
+.elevation0 {
+  background-color: var(--surface-0-color);
+}
+
+.elevation1 {
+  background-color: var(--surface-1-color);
+  box-shadow: var(--surface-box-shadow);
 }
 
 .title {

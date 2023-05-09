@@ -3,10 +3,10 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  box-shadow: rgb(100 100 111 / 30%) 0px 7px 29px 0px;
-  background-color: white;
-  border: 2px solid rgb(240, 240, 240);
-  border-radius: 12px;
+  box-shadow: var(--surface-box-shadow);
+  background-color: var(--surface-0-color);
+  border-radius: var(--border-radius);
+  border: var(--surface-border);
   position: absolute;
   width: 96%;
   top: 10%;

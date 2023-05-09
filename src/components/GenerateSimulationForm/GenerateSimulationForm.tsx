@@ -93,7 +93,7 @@ const GenerateSimulationForm = ({
   return (
     <div className={styles.container}>
       <div className={styles.body}>
-        <Card title="Simulation information">
+        <Card elevation={1} title="Simulation information">
           <div className={styles.simulationInformationBody}>
             <div className={styles.textFields}>
               <label htmlFor="pkg">Package (optional)</label>
@@ -185,7 +185,7 @@ const GenerateSimulationForm = ({
             </div>
           </div>
         </Card>
-        <Card title="Output">
+        <Card elevation={1} title="Output">
           <div className={styles.outputBody}>
             <div className={styles.directories}>
               <label htmlFor="downloadsDirectory">Downloads folder</label>
@@ -253,7 +253,7 @@ const GenerateSimulationForm = ({
             </div>
           </div>
         </Card>
-        <Card title="Filters">
+        <Card elevation={1} title="Filters">
           <div className={styles.filters}>
             <div className={styles.filtersHeader}>
               <label>Java regular expressions that match the entireURL</label>
